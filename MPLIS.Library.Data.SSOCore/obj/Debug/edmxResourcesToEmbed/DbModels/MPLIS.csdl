@@ -1,0 +1,1032 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MPLISModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="MPLISEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HC_DMKVHC" EntityType="MPLISModel.HC_DMKVHC" />
+    <EntitySet Name="HC_HUYEN" EntityType="MPLISModel.HC_HUYEN" />
+    <EntitySet Name="HC_TINH" EntityType="MPLISModel.HC_TINH" />
+    <EntitySet Name="HC_TINHTHAMSO" EntityType="MPLISModel.HC_TINHTHAMSO" />
+    <EntitySet Name="HT_CAUHINH" EntityType="MPLISModel.HT_CAUHINH" />
+    <EntitySet Name="HT_CAUHINHNGUOIDUNG" EntityType="MPLISModel.HT_CAUHINHNGUOIDUNG" />
+    <EntitySet Name="HT_CHUCNANG" EntityType="MPLISModel.HT_CHUCNANG" />
+    <EntitySet Name="HT_CHUCNANG_NHOMCHUCNANG" EntityType="MPLISModel.HT_CHUCNANG_NHOMCHUCNANG" />
+    <EntitySet Name="HT_LICHSUTRUYCAP" EntityType="MPLISModel.HT_LICHSUTRUYCAP" />
+    <EntitySet Name="HT_MAUGIAYTOKEMTHEOHS" EntityType="MPLISModel.HT_MAUGIAYTOKEMTHEOHS" />
+    <EntitySet Name="HT_MENU" EntityType="MPLISModel.HT_MENU" />
+    <EntitySet Name="HT_NGUOIDUNG" EntityType="MPLISModel.HT_NGUOIDUNG" />
+    <EntitySet Name="HT_NGUOIDUNG_QUYEN" EntityType="MPLISModel.HT_NGUOIDUNG_QUYEN" />
+    <EntitySet Name="HT_NHOMCHUCNANG" EntityType="MPLISModel.HT_NHOMCHUCNANG" />
+    <EntitySet Name="HT_NHOMCHUCNANG_MENU" EntityType="MPLISModel.HT_NHOMCHUCNANG_MENU" />
+    <EntitySet Name="HT_QUYEN" EntityType="MPLISModel.HT_QUYEN" />
+    <EntitySet Name="HT_THONGBAO" EntityType="MPLISModel.HT_THONGBAO" />
+    <EntitySet Name="HT_TOCHUC" EntityType="MPLISModel.HT_TOCHUC" />
+    <EntitySet Name="HT_TOCHUC_NGUOIDUNG" EntityType="MPLISModel.HT_TOCHUC_NGUOIDUNG" />
+    <EntitySet Name="HT_TOCHUC_NHOMCHUCNANG" EntityType="MPLISModel.HT_TOCHUC_NHOMCHUCNANG" />
+    <EntitySet Name="HT_UNGDUNG" EntityType="MPLISModel.HT_UNGDUNG" />
+    <EntitySet Name="HT_XA_NGUOIDUNG" EntityType="MPLISModel.HT_XA_NGUOIDUNG" />
+    <EntitySet Name="HT_XA_TOCHUC" EntityType="MPLISModel.HT_XA_TOCHUC" />
+    <AssociationSet Name="HC_XA_HC_HUYEN_FK" Association="MPLISModel.HC_XA_HC_HUYEN_FK">
+      <End Role="HC_HUYEN" EntitySet="HC_HUYEN" />
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+    </AssociationSet>
+    <AssociationSet Name="HT_XA_NGUOIDUNG_HC_XA_FK" Association="MPLISModel.HT_XA_NGUOIDUNG_HC_XA_FK">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HT_XA_NGUOIDUNG" EntitySet="HT_XA_NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_XA_TOCHUC_HC_XA_FK" Association="MPLISModel.HT_XA_TOCHUC_HC_XA_FK">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HT_XA_TOCHUC" EntitySet="HT_XA_TOCHUC" />
+    </AssociationSet>
+    <AssociationSet Name="HC_HUYEN_HC_TINH_FK1" Association="MPLISModel.HC_HUYEN_HC_TINH_FK1">
+      <End Role="HC_TINH" EntitySet="HC_TINH" />
+      <End Role="HC_HUYEN" EntitySet="HC_HUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="HC_TINH_HC_TINHTHAMSO" Association="MPLISModel.HC_TINH_HC_TINHTHAMSO">
+      <End Role="HC_TINH" EntitySet="HC_TINH" />
+      <End Role="HC_TINHTHAMSO" EntitySet="HC_TINHTHAMSO" />
+    </AssociationSet>
+    <AssociationSet Name="HT_ND_HT_CHND_FK" Association="MPLISModel.HT_ND_HT_CHND_FK">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_CAUHINHNGUOIDUNG" EntitySet="HT_CAUHINHNGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_CHUCNANG_HT_CHUCNANG_FK" Association="MPLISModel.HT_CHUCNANG_HT_CHUCNANG_FK">
+      <End Role="HT_CHUCNANG" EntitySet="HT_CHUCNANG" />
+      <End Role="HT_CHUCNANG1" EntitySet="HT_CHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_CN_NCN_HT_CN_FK" Association="MPLISModel.HT_CN_NCN_HT_CN_FK">
+      <End Role="HT_CHUCNANG" EntitySet="HT_CHUCNANG" />
+      <End Role="HT_CHUCNANG_NHOMCHUCNANG" EntitySet="HT_CHUCNANG_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_QUYEN_HT_CHUCNANG_FK1" Association="MPLISModel.HT_QUYEN_HT_CHUCNANG_FK1">
+      <End Role="HT_CHUCNANG" EntitySet="HT_CHUCNANG" />
+      <End Role="HT_QUYEN" EntitySet="HT_QUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="HT_CN_NCN_HT_NCN_FK" Association="MPLISModel.HT_CN_NCN_HT_NCN_FK">
+      <End Role="HT_NHOMCHUCNANG" EntitySet="HT_NHOMCHUCNANG" />
+      <End Role="HT_CHUCNANG_NHOMCHUCNANG" EntitySet="HT_CHUCNANG_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_LSTC_HT_ND_FK" Association="MPLISModel.HT_LSTC_HT_ND_FK">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_LICHSUTRUYCAP" EntitySet="HT_LICHSUTRUYCAP" />
+    </AssociationSet>
+    <AssociationSet Name="HT_MENU_HT_MENU_FK" Association="MPLISModel.HT_MENU_HT_MENU_FK">
+      <End Role="HT_MENU" EntitySet="HT_MENU" />
+      <End Role="HT_MENU1" EntitySet="HT_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NCN_M_HT_M_FK" Association="MPLISModel.HT_NCN_M_HT_M_FK">
+      <End Role="HT_MENU" EntitySet="HT_MENU" />
+      <End Role="HT_NHOMCHUCNANG_MENU" EntitySet="HT_NHOMCHUCNANG_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NGUOIDUNG_QUYEN_HT_NGU_FK1" Association="MPLISModel.HT_NGUOIDUNG_QUYEN_HT_NGU_FK1">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_NGUOIDUNG_QUYEN" EntitySet="HT_NGUOIDUNG_QUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TC_ND_HT_ND_FK" Association="MPLISModel.HT_TC_ND_HT_ND_FK">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_TOCHUC_NGUOIDUNG" EntitySet="HT_TOCHUC_NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_X_ND_HT_ND_FK" Association="MPLISModel.HT_X_ND_HT_ND_FK">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_XA_NGUOIDUNG" EntitySet="HT_XA_NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NGUOIDUNG_QUYEN_HT_QUY_FK1" Association="MPLISModel.HT_NGUOIDUNG_QUYEN_HT_QUY_FK1">
+      <End Role="HT_QUYEN" EntitySet="HT_QUYEN" />
+      <End Role="HT_NGUOIDUNG_QUYEN" EntitySet="HT_NGUOIDUNG_QUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NCN_HT_UD_FK" Association="MPLISModel.HT_NCN_HT_UD_FK">
+      <End Role="HT_UNGDUNG" EntitySet="HT_UNGDUNG" />
+      <End Role="HT_NHOMCHUCNANG" EntitySet="HT_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NCN_M_HT_NCN_FK" Association="MPLISModel.HT_NCN_M_HT_NCN_FK">
+      <End Role="HT_NHOMCHUCNANG" EntitySet="HT_NHOMCHUCNANG" />
+      <End Role="HT_NHOMCHUCNANG_MENU" EntitySet="HT_NHOMCHUCNANG_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TC_NCN_HT_NCN_FK" Association="MPLISModel.HT_TC_NCN_HT_NCN_FK">
+      <End Role="HT_NHOMCHUCNANG" EntitySet="HT_NHOMCHUCNANG" />
+      <End Role="HT_TOCHUC_NHOMCHUCNANG" EntitySet="HT_TOCHUC_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TC_NCN_HT_TC_FK" Association="MPLISModel.HT_TC_NCN_HT_TC_FK">
+      <End Role="HT_TOCHUC" EntitySet="HT_TOCHUC" />
+      <End Role="HT_TOCHUC_NHOMCHUCNANG" EntitySet="HT_TOCHUC_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TC_ND_HT_TC_FK" Association="MPLISModel.HT_TC_ND_HT_TC_FK">
+      <End Role="HT_TOCHUC" EntitySet="HT_TOCHUC" />
+      <End Role="HT_TOCHUC_NGUOIDUNG" EntitySet="HT_TOCHUC_NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TOCHUC_HT_TOCHUC_FK" Association="MPLISModel.HT_TOCHUC_HT_TOCHUC_FK">
+      <End Role="HT_TOCHUC" EntitySet="HT_TOCHUC" />
+      <End Role="HT_TOCHUC1" EntitySet="HT_TOCHUC" />
+    </AssociationSet>
+    <AssociationSet Name="HT_XA_TOCHUC_HT_TOCHUC_FK" Association="MPLISModel.HT_XA_TOCHUC_HT_TOCHUC_FK">
+      <End Role="HT_TOCHUC" EntitySet="HT_TOCHUC" />
+      <End Role="HT_XA_TOCHUC" EntitySet="HT_XA_TOCHUC" />
+    </AssociationSet>
+    <EntitySet Name="HS_HOSO" EntityType="MPLISModel.HS_HOSO" />
+    <EntitySet Name="HS_LIENKETTHUADAT" EntityType="MPLISModel.HS_LIENKETTHUADAT" />
+    <EntitySet Name="HS_THANHPHANHOSO" EntityType="MPLISModel.HS_THANHPHANHOSO" />
+    <AssociationSet Name="HS_HOSO_HC_XA_FK" Association="MPLISModel.HS_HOSO_HC_XA_FK">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HS_HOSO" EntitySet="HS_HOSO" />
+    </AssociationSet>
+    <AssociationSet Name="HS_LIENKETTHUADAT_FK1" Association="MPLISModel.HS_LIENKETTHUADAT_FK1">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HS_LIENKETTHUADAT" EntitySet="HS_LIENKETTHUADAT" />
+    </AssociationSet>
+    <AssociationSet Name="HS_THANHPHANHOSO_HS_HOSO_FK1" Association="MPLISModel.HS_THANHPHANHOSO_HS_HOSO_FK1">
+      <End Role="HS_HOSO" EntitySet="HS_HOSO" />
+      <End Role="HS_THANHPHANHOSO" EntitySet="HS_THANHPHANHOSO" />
+    </AssociationSet>
+    <AssociationSet Name="HS_TOTHUA_FK1" Association="MPLISModel.HS_TOTHUA_FK1">
+      <End Role="HS_HOSO" EntitySet="HS_HOSO" />
+      <End Role="HS_LIENKETTHUADAT" EntitySet="HS_LIENKETTHUADAT" />
+    </AssociationSet>
+    <EntitySet Name="HS_LICHSU" EntityType="MPLISModel.HS_LICHSU" />
+    <AssociationSet Name="HS_LS_HC_XA_FK" Association="MPLISModel.HS_LS_HC_XA_FK">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HS_LICHSU" EntitySet="HS_LICHSU" />
+    </AssociationSet>
+    <AssociationSet Name="HS_LST_HS_HS_FK" Association="MPLISModel.HS_LST_HS_HS_FK">
+      <End Role="HS_HOSO" EntitySet="HS_HOSO" />
+      <End Role="HS_LICHSU" EntitySet="HS_LICHSU" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="HC_DMKVHC">
+    <Key>
+      <PropertyRef Name="KVHCID" />
+    </Key>
+    <Property Name="KVHCID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HUYENID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="MAXA" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="TENKVHC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PHANLOAI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="MAKVHC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HC_HUYEN" Relationship="MPLISModel.HC_XA_HC_HUYEN_FK" FromRole="HC_DMKVHC" ToRole="HC_HUYEN" />
+    <NavigationProperty Name="HT_XA_NGUOIDUNG" Relationship="MPLISModel.HT_XA_NGUOIDUNG_HC_XA_FK" FromRole="HC_DMKVHC" ToRole="HT_XA_NGUOIDUNG" />
+    <NavigationProperty Name="HT_XA_TOCHUC" Relationship="MPLISModel.HT_XA_TOCHUC_HC_XA_FK" FromRole="HC_DMKVHC" ToRole="HT_XA_TOCHUC" />
+    <NavigationProperty Name="HS_HOSO" Relationship="MPLISModel.HS_HOSO_HC_XA_FK" FromRole="HC_DMKVHC" ToRole="HS_HOSO" />
+    <NavigationProperty Name="HS_LIENKETTHUADAT" Relationship="MPLISModel.HS_LIENKETTHUADAT_FK1" FromRole="HC_DMKVHC" ToRole="HS_LIENKETTHUADAT" />
+    <NavigationProperty Name="HS_LICHSU" Relationship="MPLISModel.HS_LS_HC_XA_FK" FromRole="HC_DMKVHC" ToRole="HS_LICHSU" />
+  </EntityType>
+  <EntityType Name="HC_HUYEN">
+    <Key>
+      <PropertyRef Name="HUYENID" />
+    </Key>
+    <Property Name="HUYENID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TINHID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="MAHUYEN" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="TENHUYEN" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="PHANLOAI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="MAKVHC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HC_DMKVHC" Relationship="MPLISModel.HC_XA_HC_HUYEN_FK" FromRole="HC_HUYEN" ToRole="HC_DMKVHC" />
+    <NavigationProperty Name="HC_TINH" Relationship="MPLISModel.HC_HUYEN_HC_TINH_FK1" FromRole="HC_HUYEN" ToRole="HC_TINH" />
+  </EntityType>
+  <EntityType Name="HC_TINH">
+    <Key>
+      <PropertyRef Name="TINHID" />
+    </Key>
+    <Property Name="TINHID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="MATINH" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="TENTINH" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="PHANLOAI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="MAKVHC" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HC_HUYEN" Relationship="MPLISModel.HC_HUYEN_HC_TINH_FK1" FromRole="HC_TINH" ToRole="HC_HUYEN" />
+    <NavigationProperty Name="HC_TINHTHAMSO" Relationship="MPLISModel.HC_TINH_HC_TINHTHAMSO" FromRole="HC_TINH" ToRole="HC_TINHTHAMSO" />
+  </EntityType>
+  <EntityType Name="HC_TINHTHAMSO">
+    <Key>
+      <PropertyRef Name="TINHTHAMSOID" />
+    </Key>
+    <Property Name="TINHTHAMSOID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THUADATSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="THUADATLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="BASEMAPSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="QUYHOACHCAPTINHMAPSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KHOANHDATSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="HIENTRANGSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GIADATSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="VETINHSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GIADATGRSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MDSDSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="CAPGCNSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="TINHID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="KINHTUYENTRUC" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="QUYHOACHCAPTINHLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="KHOANHDATLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="HIENTRANGLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GIADATLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="MDSDLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="CAPGCNLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="GIADATGRLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="KVHCSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="KVHCLAYERTINHINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="LOADEXPORTDGN" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="LOADEXPORTGML" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GETDATAEDITDESKTOP" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="THUADATMAPSERVERLINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="THUADATMAPSERVERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="KVHCLAYERHUYENINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="KVHCLAYERXAINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="LOADEXPORTSHAPEFILE" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="GEOMETRYSERVER" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="QUYHOACHCAPHUYENLAYERINDEX" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="QUYHOACHCAPHUYENMAPSERVICELINK" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="QUYHOACHCAPHUYENFEATURESERVER" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="QUYHOACHCAPTINHFEATURESERVER" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="THUADATSERVICELINKLOCAL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HC_TINH" Relationship="MPLISModel.HC_TINH_HC_TINHTHAMSO" FromRole="HC_TINHTHAMSO" ToRole="HC_TINH" />
+  </EntityType>
+  <EntityType Name="HT_CAUHINH">
+    <Key>
+      <PropertyRef Name="CAUHINHID" />
+    </Key>
+    <Property Name="CAUHINHID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TENCAUHINH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GIATRI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CAP" Type="Byte" />
+    <Property Name="MADONVIHANHCHINHID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="UID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="HT_CAUHINHNGUOIDUNG">
+    <Key>
+      <PropertyRef Name="CAUHINHNGUOIDUNGID" />
+    </Key>
+    <Property Name="CAUHINHNGUOIDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NGUOIDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TENCAUHINH" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GIATRI" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_NGUOIDUNG" Relationship="MPLISModel.HT_ND_HT_CHND_FK" FromRole="HT_CAUHINHNGUOIDUNG" ToRole="HT_NGUOIDUNG" />
+  </EntityType>
+  <EntityType Name="HT_CHUCNANG">
+    <Key>
+      <PropertyRef Name="CHUCNANGID" />
+    </Key>
+    <Property Name="CHUCNANGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="KHOACHAID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="MACHUCNANG" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TENCHUCNANG" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CHOPHEPSUDUNG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="THUCHIENTHUCONG" Type="Boolean" />
+    <Property Name="CACBIENDAUVAO" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="CACBIENDAURA" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HT_CHUCNANG1" Relationship="MPLISModel.HT_CHUCNANG_HT_CHUCNANG_FK" FromRole="HT_CHUCNANG" ToRole="HT_CHUCNANG1" />
+    <NavigationProperty Name="HT_CHUCNANG2" Relationship="MPLISModel.HT_CHUCNANG_HT_CHUCNANG_FK" FromRole="HT_CHUCNANG1" ToRole="HT_CHUCNANG" />
+    <NavigationProperty Name="HT_CHUCNANG_NHOMCHUCNANG" Relationship="MPLISModel.HT_CN_NCN_HT_CN_FK" FromRole="HT_CHUCNANG" ToRole="HT_CHUCNANG_NHOMCHUCNANG" />
+    <NavigationProperty Name="HT_QUYEN" Relationship="MPLISModel.HT_QUYEN_HT_CHUCNANG_FK1" FromRole="HT_CHUCNANG" ToRole="HT_QUYEN" />
+  </EntityType>
+  <EntityType Name="HT_CHUCNANG_NHOMCHUCNANG">
+    <Key>
+      <PropertyRef Name="NHOMCHUCNANGID" />
+      <PropertyRef Name="CHUCNANGID" />
+    </Key>
+    <Property Name="NHOMCHUCNANGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="CHUCNANGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_CHUCNANG" Relationship="MPLISModel.HT_CN_NCN_HT_CN_FK" FromRole="HT_CHUCNANG_NHOMCHUCNANG" ToRole="HT_CHUCNANG" />
+    <NavigationProperty Name="HT_NHOMCHUCNANG" Relationship="MPLISModel.HT_CN_NCN_HT_NCN_FK" FromRole="HT_CHUCNANG_NHOMCHUCNANG" ToRole="HT_NHOMCHUCNANG" />
+  </EntityType>
+  <EntityType Name="HT_LICHSUTRUYCAP">
+    <Key>
+      <PropertyRef Name="LICHSUTRUYCAPID" />
+    </Key>
+    <Property Name="LICHSUTRUYCAPID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NGUOIDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NAM" Type="Int16" />
+    <Property Name="LOAIHANHDONG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_NGUOIDUNG" Relationship="MPLISModel.HT_LSTC_HT_ND_FK" FromRole="HT_LICHSUTRUYCAP" ToRole="HT_NGUOIDUNG" />
+  </EntityType>
+  <EntityType Name="HT_MAUGIAYTOKEMTHEOHS">
+    <Key>
+      <PropertyRef Name="MAUGIAYTOKEMTHEOHSID" />
+    </Key>
+    <Property Name="MAUGIAYTOKEMTHEOHSID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="GIAYTOKEMTHEOHSID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="CAP" Type="Byte" />
+    <Property Name="MADONVIHANHCHINHID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TEMPLATE" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="UID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="HT_MENU">
+    <Key>
+      <PropertyRef Name="MENUID" />
+    </Key>
+    <Property Name="MENUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="KHOACHAID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="UNGDUNGID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TENMENU" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ICON" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CHOPHEPSUDUNG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="ACTION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CONTROLLER" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MAMENU" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HT_MENU1" Relationship="MPLISModel.HT_MENU_HT_MENU_FK" FromRole="HT_MENU" ToRole="HT_MENU1" />
+    <NavigationProperty Name="HT_MENU2" Relationship="MPLISModel.HT_MENU_HT_MENU_FK" FromRole="HT_MENU1" ToRole="HT_MENU" />
+    <NavigationProperty Name="HT_NHOMCHUCNANG_MENU" Relationship="MPLISModel.HT_NCN_M_HT_M_FK" FromRole="HT_MENU" ToRole="HT_NHOMCHUCNANG_MENU" />
+  </EntityType>
+  <EntityType Name="HT_NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="NGUOIDUNGID" />
+    </Key>
+    <Property Name="NGUOIDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TENDANGNHAP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MATKHAU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="HOTENNGUOIDUNG" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GIOITINH" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="SODIENTHOAI" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SODIENTHOAI2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DIACHI" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="READONLY" Type="Boolean" />
+    <Property Name="ANHBIEUTUONG" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PHAITHAYDOIMATKHAU" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="THOIDIEMMATKHAUCOHIEULUC" Type="DateTime" />
+    <Property Name="THOIDIEMMATKHAUHETHIEULUC" Type="DateTime" />
+    <Property Name="CHOPHEPSUDUNG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="CAPNGUOIDUNG" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="DONVIHANHCHINHID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="LOAINGUOIDUNG" Type="Decimal" Precision="38" Scale="0" />
+    <NavigationProperty Name="HT_CAUHINHNGUOIDUNG" Relationship="MPLISModel.HT_ND_HT_CHND_FK" FromRole="HT_NGUOIDUNG" ToRole="HT_CAUHINHNGUOIDUNG" />
+    <NavigationProperty Name="HT_LICHSUTRUYCAP" Relationship="MPLISModel.HT_LSTC_HT_ND_FK" FromRole="HT_NGUOIDUNG" ToRole="HT_LICHSUTRUYCAP" />
+    <NavigationProperty Name="HT_NGUOIDUNG_QUYEN" Relationship="MPLISModel.HT_NGUOIDUNG_QUYEN_HT_NGU_FK1" FromRole="HT_NGUOIDUNG" ToRole="HT_NGUOIDUNG_QUYEN" />
+    <NavigationProperty Name="HT_TOCHUC_NGUOIDUNG" Relationship="MPLISModel.HT_TC_ND_HT_ND_FK" FromRole="HT_NGUOIDUNG" ToRole="HT_TOCHUC_NGUOIDUNG" />
+    <NavigationProperty Name="HT_XA_NGUOIDUNG" Relationship="MPLISModel.HT_X_ND_HT_ND_FK" FromRole="HT_NGUOIDUNG" ToRole="HT_XA_NGUOIDUNG" />
+  </EntityType>
+  <EntityType Name="HT_NGUOIDUNG_QUYEN">
+    <Key>
+      <PropertyRef Name="NGUOIDUNGID" />
+      <PropertyRef Name="QUYENID" />
+    </Key>
+    <Property Name="NGUOIDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="QUYENID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="KICHHOATQUYEN" Type="Boolean" />
+    <Property Name="UID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_NGUOIDUNG" Relationship="MPLISModel.HT_NGUOIDUNG_QUYEN_HT_NGU_FK1" FromRole="HT_NGUOIDUNG_QUYEN" ToRole="HT_NGUOIDUNG" />
+    <NavigationProperty Name="HT_QUYEN" Relationship="MPLISModel.HT_NGUOIDUNG_QUYEN_HT_QUY_FK1" FromRole="HT_NGUOIDUNG_QUYEN" ToRole="HT_QUYEN" />
+  </EntityType>
+  <EntityType Name="HT_NHOMCHUCNANG">
+    <Key>
+      <PropertyRef Name="NHOMCHUCNANGID" />
+    </Key>
+    <Property Name="NHOMCHUCNANGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="UNGDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="TENNHOM" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_CHUCNANG_NHOMCHUCNANG" Relationship="MPLISModel.HT_CN_NCN_HT_NCN_FK" FromRole="HT_NHOMCHUCNANG" ToRole="HT_CHUCNANG_NHOMCHUCNANG" />
+    <NavigationProperty Name="HT_UNGDUNG" Relationship="MPLISModel.HT_NCN_HT_UD_FK" FromRole="HT_NHOMCHUCNANG" ToRole="HT_UNGDUNG" />
+    <NavigationProperty Name="HT_NHOMCHUCNANG_MENU" Relationship="MPLISModel.HT_NCN_M_HT_NCN_FK" FromRole="HT_NHOMCHUCNANG" ToRole="HT_NHOMCHUCNANG_MENU" />
+    <NavigationProperty Name="HT_TOCHUC_NHOMCHUCNANG" Relationship="MPLISModel.HT_TC_NCN_HT_NCN_FK" FromRole="HT_NHOMCHUCNANG" ToRole="HT_TOCHUC_NHOMCHUCNANG" />
+  </EntityType>
+  <EntityType Name="HT_NHOMCHUCNANG_MENU">
+    <Key>
+      <PropertyRef Name="MENUID" />
+      <PropertyRef Name="NHOMCHUCNANGID" />
+    </Key>
+    <Property Name="MENUID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NHOMCHUCNANGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_MENU" Relationship="MPLISModel.HT_NCN_M_HT_M_FK" FromRole="HT_NHOMCHUCNANG_MENU" ToRole="HT_MENU" />
+    <NavigationProperty Name="HT_NHOMCHUCNANG" Relationship="MPLISModel.HT_NCN_M_HT_NCN_FK" FromRole="HT_NHOMCHUCNANG_MENU" ToRole="HT_NHOMCHUCNANG" />
+  </EntityType>
+  <EntityType Name="HT_QUYEN">
+    <Key>
+      <PropertyRef Name="QUYENID" />
+    </Key>
+    <Property Name="QUYENID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="CHUCNANGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CONTROLLERNAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIONNAME" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="UID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_CHUCNANG" Relationship="MPLISModel.HT_QUYEN_HT_CHUCNANG_FK1" FromRole="HT_QUYEN" ToRole="HT_CHUCNANG" />
+    <NavigationProperty Name="HT_NGUOIDUNG_QUYEN" Relationship="MPLISModel.HT_NGUOIDUNG_QUYEN_HT_QUY_FK1" FromRole="HT_QUYEN" ToRole="HT_NGUOIDUNG_QUYEN" />
+  </EntityType>
+  <EntityType Name="HT_THONGBAO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NGUOIDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NOIDUNG" Type="String" Nullable="false" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="LINK" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DAXEM" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NGAYNHAN" Type="DateTime" Nullable="false" />
+    <Property Name="NGAYXEM" Type="DateTime" Nullable="false" />
+    <Property Name="TIEUDE" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="VOHIEUHOA" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="HT_TOCHUC">
+    <Key>
+      <PropertyRef Name="TOCHUCID" />
+    </Key>
+    <Property Name="TOCHUCID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="KHOACHAID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TENTOCHUC" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="DONVIHANHCHINHID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="CAPTOCHUC" Type="Byte" />
+    <Property Name="MATOCHUC" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HT_TOCHUC_NHOMCHUCNANG" Relationship="MPLISModel.HT_TC_NCN_HT_TC_FK" FromRole="HT_TOCHUC" ToRole="HT_TOCHUC_NHOMCHUCNANG" />
+    <NavigationProperty Name="HT_TOCHUC_NGUOIDUNG" Relationship="MPLISModel.HT_TC_ND_HT_TC_FK" FromRole="HT_TOCHUC" ToRole="HT_TOCHUC_NGUOIDUNG" />
+    <NavigationProperty Name="HT_TOCHUC1" Relationship="MPLISModel.HT_TOCHUC_HT_TOCHUC_FK" FromRole="HT_TOCHUC" ToRole="HT_TOCHUC1" />
+    <NavigationProperty Name="HT_TOCHUC2" Relationship="MPLISModel.HT_TOCHUC_HT_TOCHUC_FK" FromRole="HT_TOCHUC1" ToRole="HT_TOCHUC" />
+    <NavigationProperty Name="HT_XA_TOCHUC" Relationship="MPLISModel.HT_XA_TOCHUC_HT_TOCHUC_FK" FromRole="HT_TOCHUC" ToRole="HT_XA_TOCHUC" />
+  </EntityType>
+  <EntityType Name="HT_TOCHUC_NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="TOCHUCID" />
+      <PropertyRef Name="NGUOIDUNGID" />
+    </Key>
+    <Property Name="TOCHUCID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NGUOIDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="CHUCVU" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_NGUOIDUNG" Relationship="MPLISModel.HT_TC_ND_HT_ND_FK" FromRole="HT_TOCHUC_NGUOIDUNG" ToRole="HT_NGUOIDUNG" />
+    <NavigationProperty Name="HT_TOCHUC" Relationship="MPLISModel.HT_TC_ND_HT_TC_FK" FromRole="HT_TOCHUC_NGUOIDUNG" ToRole="HT_TOCHUC" />
+  </EntityType>
+  <EntityType Name="HT_TOCHUC_NHOMCHUCNANG">
+    <Key>
+      <PropertyRef Name="TOCHUCID" />
+      <PropertyRef Name="NHOMCHUCNANGID" />
+    </Key>
+    <Property Name="TOCHUCID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NHOMCHUCNANGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HT_NHOMCHUCNANG" Relationship="MPLISModel.HT_TC_NCN_HT_NCN_FK" FromRole="HT_TOCHUC_NHOMCHUCNANG" ToRole="HT_NHOMCHUCNANG" />
+    <NavigationProperty Name="HT_TOCHUC" Relationship="MPLISModel.HT_TC_NCN_HT_TC_FK" FromRole="HT_TOCHUC_NHOMCHUCNANG" ToRole="HT_TOCHUC" />
+  </EntityType>
+  <EntityType Name="HT_UNGDUNG">
+    <Key>
+      <PropertyRef Name="UNGDUNGID" />
+    </Key>
+    <Property Name="UNGDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TENUNGDUNG" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ICON" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="CHOPHEPSUDUNG" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="THUTUSAPXEP" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="URL" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="MAUNGDUNG" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HT_NHOMCHUCNANG" Relationship="MPLISModel.HT_NCN_HT_UD_FK" FromRole="HT_UNGDUNG" ToRole="HT_NHOMCHUCNANG" />
+  </EntityType>
+  <EntityType Name="HT_XA_NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="NGUOIDUNGID" />
+      <PropertyRef Name="XAID" />
+    </Key>
+    <Property Name="NGUOIDUNGID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="XAID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HC_DMKVHC" Relationship="MPLISModel.HT_XA_NGUOIDUNG_HC_XA_FK" FromRole="HT_XA_NGUOIDUNG" ToRole="HC_DMKVHC" />
+    <NavigationProperty Name="HT_NGUOIDUNG" Relationship="MPLISModel.HT_X_ND_HT_ND_FK" FromRole="HT_XA_NGUOIDUNG" ToRole="HT_NGUOIDUNG" />
+  </EntityType>
+  <EntityType Name="HT_XA_TOCHUC">
+    <Key>
+      <PropertyRef Name="TOCHUCID" />
+      <PropertyRef Name="XAID" />
+    </Key>
+    <Property Name="TOCHUCID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="XAID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="uId" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <NavigationProperty Name="HC_DMKVHC" Relationship="MPLISModel.HT_XA_TOCHUC_HC_XA_FK" FromRole="HT_XA_TOCHUC" ToRole="HC_DMKVHC" />
+    <NavigationProperty Name="HT_TOCHUC" Relationship="MPLISModel.HT_XA_TOCHUC_HT_TOCHUC_FK" FromRole="HT_XA_TOCHUC" ToRole="HT_TOCHUC" />
+  </EntityType>
+  <Association Name="HC_XA_HC_HUYEN_FK">
+    <End Type="MPLISModel.HC_HUYEN" Role="HC_HUYEN" Multiplicity="0..1" />
+    <End Type="MPLISModel.HC_DMKVHC" Role="HC_DMKVHC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_HUYEN">
+        <PropertyRef Name="HUYENID" />
+      </Principal>
+      <Dependent Role="HC_DMKVHC">
+        <PropertyRef Name="HUYENID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_XA_NGUOIDUNG_HC_XA_FK">
+    <End Type="MPLISModel.HC_DMKVHC" Role="HC_DMKVHC" Multiplicity="1" />
+    <End Type="MPLISModel.HT_XA_NGUOIDUNG" Role="HT_XA_NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HT_XA_NGUOIDUNG">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_XA_TOCHUC_HC_XA_FK">
+    <End Type="MPLISModel.HC_DMKVHC" Role="HC_DMKVHC" Multiplicity="1" />
+    <End Type="MPLISModel.HT_XA_TOCHUC" Role="HT_XA_TOCHUC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HT_XA_TOCHUC">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HC_HUYEN_HC_TINH_FK1">
+    <End Type="MPLISModel.HC_TINH" Role="HC_TINH" Multiplicity="1" />
+    <End Type="MPLISModel.HC_HUYEN" Role="HC_HUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_TINH">
+        <PropertyRef Name="TINHID" />
+      </Principal>
+      <Dependent Role="HC_HUYEN">
+        <PropertyRef Name="TINHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HC_TINH_HC_TINHTHAMSO">
+    <End Type="MPLISModel.HC_TINH" Role="HC_TINH" Multiplicity="0..1" />
+    <End Type="MPLISModel.HC_TINHTHAMSO" Role="HC_TINHTHAMSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_TINH">
+        <PropertyRef Name="TINHID" />
+      </Principal>
+      <Dependent Role="HC_TINHTHAMSO">
+        <PropertyRef Name="TINHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_ND_HT_CHND_FK">
+    <End Type="MPLISModel.HT_NGUOIDUNG" Role="HT_NGUOIDUNG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_CAUHINHNGUOIDUNG" Role="HT_CAUHINHNGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_CAUHINHNGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_CHUCNANG_HT_CHUCNANG_FK">
+    <End Type="MPLISModel.HT_CHUCNANG" Role="HT_CHUCNANG" Multiplicity="0..1" />
+    <End Type="MPLISModel.HT_CHUCNANG" Role="HT_CHUCNANG1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_CHUCNANG">
+        <PropertyRef Name="CHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_CHUCNANG1">
+        <PropertyRef Name="KHOACHAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_CN_NCN_HT_CN_FK">
+    <End Type="MPLISModel.HT_CHUCNANG" Role="HT_CHUCNANG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_CHUCNANG_NHOMCHUCNANG" Role="HT_CHUCNANG_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_CHUCNANG">
+        <PropertyRef Name="CHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_CHUCNANG_NHOMCHUCNANG">
+        <PropertyRef Name="CHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_QUYEN_HT_CHUCNANG_FK1">
+    <End Type="MPLISModel.HT_CHUCNANG" Role="HT_CHUCNANG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_QUYEN" Role="HT_QUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_CHUCNANG">
+        <PropertyRef Name="CHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_QUYEN">
+        <PropertyRef Name="CHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_CN_NCN_HT_NCN_FK">
+    <End Type="MPLISModel.HT_NHOMCHUCNANG" Role="HT_NHOMCHUCNANG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_CHUCNANG_NHOMCHUCNANG" Role="HT_CHUCNANG_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_CHUCNANG_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_LSTC_HT_ND_FK">
+    <End Type="MPLISModel.HT_NGUOIDUNG" Role="HT_NGUOIDUNG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_LICHSUTRUYCAP" Role="HT_LICHSUTRUYCAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_LICHSUTRUYCAP">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_MENU_HT_MENU_FK">
+    <End Type="MPLISModel.HT_MENU" Role="HT_MENU" Multiplicity="0..1" />
+    <End Type="MPLISModel.HT_MENU" Role="HT_MENU1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_MENU">
+        <PropertyRef Name="MENUID" />
+      </Principal>
+      <Dependent Role="HT_MENU1">
+        <PropertyRef Name="KHOACHAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NCN_M_HT_M_FK">
+    <End Type="MPLISModel.HT_MENU" Role="HT_MENU" Multiplicity="1" />
+    <End Type="MPLISModel.HT_NHOMCHUCNANG_MENU" Role="HT_NHOMCHUCNANG_MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_MENU">
+        <PropertyRef Name="MENUID" />
+      </Principal>
+      <Dependent Role="HT_NHOMCHUCNANG_MENU">
+        <PropertyRef Name="MENUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NGUOIDUNG_QUYEN_HT_NGU_FK1">
+    <End Type="MPLISModel.HT_NGUOIDUNG" Role="HT_NGUOIDUNG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_NGUOIDUNG_QUYEN" Role="HT_NGUOIDUNG_QUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_NGUOIDUNG_QUYEN">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TC_ND_HT_ND_FK">
+    <End Type="MPLISModel.HT_NGUOIDUNG" Role="HT_NGUOIDUNG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_TOCHUC_NGUOIDUNG" Role="HT_TOCHUC_NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_X_ND_HT_ND_FK">
+    <End Type="MPLISModel.HT_NGUOIDUNG" Role="HT_NGUOIDUNG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_XA_NGUOIDUNG" Role="HT_XA_NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_XA_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NGUOIDUNG_QUYEN_HT_QUY_FK1">
+    <End Type="MPLISModel.HT_QUYEN" Role="HT_QUYEN" Multiplicity="1" />
+    <End Type="MPLISModel.HT_NGUOIDUNG_QUYEN" Role="HT_NGUOIDUNG_QUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_QUYEN">
+        <PropertyRef Name="QUYENID" />
+      </Principal>
+      <Dependent Role="HT_NGUOIDUNG_QUYEN">
+        <PropertyRef Name="QUYENID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NCN_HT_UD_FK">
+    <End Type="MPLISModel.HT_UNGDUNG" Role="HT_UNGDUNG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_NHOMCHUCNANG" Role="HT_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_UNGDUNG">
+        <PropertyRef Name="UNGDUNGID" />
+      </Principal>
+      <Dependent Role="HT_NHOMCHUCNANG">
+        <PropertyRef Name="UNGDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NCN_M_HT_NCN_FK">
+    <End Type="MPLISModel.HT_NHOMCHUCNANG" Role="HT_NHOMCHUCNANG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_NHOMCHUCNANG_MENU" Role="HT_NHOMCHUCNANG_MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_NHOMCHUCNANG_MENU">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TC_NCN_HT_NCN_FK">
+    <End Type="MPLISModel.HT_NHOMCHUCNANG" Role="HT_NHOMCHUCNANG" Multiplicity="1" />
+    <End Type="MPLISModel.HT_TOCHUC_NHOMCHUCNANG" Role="HT_TOCHUC_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TC_NCN_HT_TC_FK">
+    <End Type="MPLISModel.HT_TOCHUC" Role="HT_TOCHUC" Multiplicity="1" />
+    <End Type="MPLISModel.HT_TOCHUC_NHOMCHUCNANG" Role="HT_TOCHUC_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC_NHOMCHUCNANG">
+        <PropertyRef Name="TOCHUCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TC_ND_HT_TC_FK">
+    <End Type="MPLISModel.HT_TOCHUC" Role="HT_TOCHUC" Multiplicity="1" />
+    <End Type="MPLISModel.HT_TOCHUC_NGUOIDUNG" Role="HT_TOCHUC_NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC_NGUOIDUNG">
+        <PropertyRef Name="TOCHUCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TOCHUC_HT_TOCHUC_FK">
+    <End Type="MPLISModel.HT_TOCHUC" Role="HT_TOCHUC" Multiplicity="0..1" />
+    <End Type="MPLISModel.HT_TOCHUC" Role="HT_TOCHUC1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC1">
+        <PropertyRef Name="KHOACHAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_XA_TOCHUC_HT_TOCHUC_FK">
+    <End Type="MPLISModel.HT_TOCHUC" Role="HT_TOCHUC" Multiplicity="1" />
+    <End Type="MPLISModel.HT_XA_TOCHUC" Role="HT_XA_TOCHUC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Principal>
+      <Dependent Role="HT_XA_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HS_HOSO">
+    <Key>
+      <PropertyRef Name="HOSOID" />
+    </Key>
+    <Property Name="HOSOID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="XAID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="MAHOSO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MAHOSO_ST" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="MAHOSO_MB" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+    <Property Name="MAHOSO_TB" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MAHOSO_TAM" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="TENHOSO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SOTODAIDIEN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SOTHUADAIDIEN" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="NGAYHOSO" Type="DateTime" />
+    <Property Name="PHONG" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="KE" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NGAN" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HOP" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TENHOP" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="GHICHU" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DALIENKETCSDL_KG" Type="Boolean" />
+    <Property Name="DALIENKETCSDL_TT" Type="Boolean" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="OID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HOSOTIEPNHANID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HC_DMKVHC" Relationship="MPLISModel.HS_HOSO_HC_XA_FK" FromRole="HS_HOSO" ToRole="HC_DMKVHC" />
+    <NavigationProperty Name="HS_THANHPHANHOSO" Relationship="MPLISModel.HS_THANHPHANHOSO_HS_HOSO_FK1" FromRole="HS_HOSO" ToRole="HS_THANHPHANHOSO" />
+    <NavigationProperty Name="HS_LIENKETTHUADAT" Relationship="MPLISModel.HS_TOTHUA_FK1" FromRole="HS_HOSO" ToRole="HS_LIENKETTHUADAT" />
+    <NavigationProperty Name="HS_LICHSU" Relationship="MPLISModel.HS_LST_HS_HS_FK" FromRole="HS_HOSO" ToRole="HS_LICHSU" />
+  </EntityType>
+  <EntityType Name="HS_LIENKETTHUADAT">
+    <Key>
+      <PropertyRef Name="TOTHUAID" />
+    </Key>
+    <Property Name="TOTHUAID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HOSOID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="SOTO" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="SOTHUA" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="MOTA" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="XAID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="THUAID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HC_DMKVHC" Relationship="MPLISModel.HS_LIENKETTHUADAT_FK1" FromRole="HS_LIENKETTHUADAT" ToRole="HC_DMKVHC" />
+    <NavigationProperty Name="HS_HOSO" Relationship="MPLISModel.HS_TOTHUA_FK1" FromRole="HS_LIENKETTHUADAT" ToRole="HS_HOSO" />
+  </EntityType>
+  <EntityType Name="HS_THANHPHANHOSO">
+    <Key>
+      <PropertyRef Name="THANHPHANHOSOID" />
+    </Key>
+    <Property Name="THANHPHANHOSOID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HOSOID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="GIAYTOKEMTHEOHSID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="TENTEPDULIEU" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="KICHTHUOC" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="DUONGDAN" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="UID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="OID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="SOBIENNHAN" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HS_HOSO" Relationship="MPLISModel.HS_THANHPHANHOSO_HS_HOSO_FK1" FromRole="HS_THANHPHANHOSO" ToRole="HS_HOSO" />
+  </EntityType>
+  <Association Name="HS_HOSO_HC_XA_FK">
+    <End Type="MPLISModel.HC_DMKVHC" Role="HC_DMKVHC" Multiplicity="1" />
+    <End Type="MPLISModel.HS_HOSO" Role="HS_HOSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HS_HOSO">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_LIENKETTHUADAT_FK1">
+    <End Type="MPLISModel.HC_DMKVHC" Role="HC_DMKVHC" Multiplicity="1" />
+    <End Type="MPLISModel.HS_LIENKETTHUADAT" Role="HS_LIENKETTHUADAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HS_LIENKETTHUADAT">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_THANHPHANHOSO_HS_HOSO_FK1">
+    <End Type="MPLISModel.HS_HOSO" Role="HS_HOSO" Multiplicity="1" />
+    <End Type="MPLISModel.HS_THANHPHANHOSO" Role="HS_THANHPHANHOSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HS_HOSO">
+        <PropertyRef Name="HOSOID" />
+      </Principal>
+      <Dependent Role="HS_THANHPHANHOSO">
+        <PropertyRef Name="HOSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_TOTHUA_FK1">
+    <End Type="MPLISModel.HS_HOSO" Role="HS_HOSO" Multiplicity="1" />
+    <End Type="MPLISModel.HS_LIENKETTHUADAT" Role="HS_LIENKETTHUADAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HS_HOSO">
+        <PropertyRef Name="HOSOID" />
+      </Principal>
+      <Dependent Role="HS_LIENKETTHUADAT">
+        <PropertyRef Name="HOSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="HS_LICHSU">
+    <Key>
+      <PropertyRef Name="LICHSUHOSOID" />
+    </Key>
+    <Property Name="LICHSUHOSOID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="XAID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HOSOID" Type="String" Nullable="false" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HOSOTRUOCID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="HOSOSAUID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="UID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMKHOITAO" Type="DateTime" />
+    <Property Name="NGUOICAPNHATID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <Property Name="THOIDIEMCAPNHAT" Type="DateTime" />
+    <Property Name="OID" Type="String" MaxLength="36" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="HC_DMKVHC" Relationship="MPLISModel.HS_LS_HC_XA_FK" FromRole="HS_LICHSU" ToRole="HC_DMKVHC" />
+    <NavigationProperty Name="HS_HOSO" Relationship="MPLISModel.HS_LST_HS_HS_FK" FromRole="HS_LICHSU" ToRole="HS_HOSO" />
+  </EntityType>
+  <Association Name="HS_LS_HC_XA_FK">
+    <End Type="MPLISModel.HC_DMKVHC" Role="HC_DMKVHC" Multiplicity="1" />
+    <End Type="MPLISModel.HS_LICHSU" Role="HS_LICHSU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HS_LICHSU">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_LST_HS_HS_FK">
+    <End Type="MPLISModel.HS_HOSO" Role="HS_HOSO" Multiplicity="1" />
+    <End Type="MPLISModel.HS_LICHSU" Role="HS_LICHSU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HS_HOSO">
+        <PropertyRef Name="HOSOID" />
+      </Principal>
+      <Dependent Role="HS_LICHSU">
+        <PropertyRef Name="HOSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

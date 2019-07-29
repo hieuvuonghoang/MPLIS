@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c32ceb8d248441a99179f0f3f7e3708d" Name="Diagram1">
+        <EntityTypeShape EntityType="MPLISModel.HC_DMKVHC" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MPLISModel.HC_HUYEN" Width="1.5" PointX="1.5" PointY="20.875" />
+        <EntityTypeShape EntityType="MPLISModel.HC_TINH" Width="1.5" PointX="1.5" PointY="26" />
+        <EntityTypeShape EntityType="MPLISModel.HC_TINHTHAMSO" Width="1.5" PointX="3.75" PointY="23.125" />
+        <EntityTypeShape EntityType="MPLISModel.HT_CAUHINH" Width="1.5" PointX="5.75" PointY="2.375" />
+        <EntityTypeShape EntityType="MPLISModel.HT_CAUHINHNGUOIDUNG" Width="1.5" PointX="6" PointY="22.375" />
+        <EntityTypeShape EntityType="MPLISModel.HT_CHUCNANG" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="MPLISModel.HT_CHUCNANG_NHOMCHUCNANG" Width="1.5" PointX="11" PointY="9" />
+        <EntityTypeShape EntityType="MPLISModel.HT_LICHSUTRUYCAP" Width="1.5" PointX="6" PointY="18.75" />
+        <EntityTypeShape EntityType="MPLISModel.HT_MAUGIAYTOKEMTHEOHS" Width="1.5" PointX="13.75" PointY="2.375" />
+        <EntityTypeShape EntityType="MPLISModel.HT_MENU" Width="1.5" PointX="5.75" PointY="12.75" />
+        <EntityTypeShape EntityType="MPLISModel.HT_NGUOIDUNG" Width="1.5" PointX="3.75" PointY="11.375" />
+        <EntityTypeShape EntityType="MPLISModel.HT_NGUOIDUNG_QUYEN" Width="1.5" PointX="13.25" PointY="9.75" />
+        <EntityTypeShape EntityType="MPLISModel.HT_NHOMCHUCNANG" Width="1.5" PointX="0.75" PointY="11.125" />
+        <EntityTypeShape EntityType="MPLISModel.HT_NHOMCHUCNANG_MENU" Width="1.5" PointX="8" PointY="12.875" />
+        <EntityTypeShape EntityType="MPLISModel.HT_QUYEN" Width="1.5" PointX="11" PointY="4.5" />
+        <EntityTypeShape EntityType="MPLISModel.HT_THONGBAO" Width="1.5" PointX="13.75" PointY="13.375" />
+        <EntityTypeShape EntityType="MPLISModel.HT_TOCHUC" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="MPLISModel.HT_TOCHUC_NGUOIDUNG" Width="1.5" PointX="6" PointY="6.25" />
+        <EntityTypeShape EntityType="MPLISModel.HT_TOCHUC_NHOMCHUCNANG" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="MPLISModel.HT_UNGDUNG" Width="1.5" PointX="1.5" PointY="16.125" />
+        <EntityTypeShape EntityType="MPLISModel.HT_XA_NGUOIDUNG" Width="1.5" PointX="11" PointY="13" />
+        <EntityTypeShape EntityType="MPLISModel.HT_XA_TOCHUC" Width="1.5" PointX="3" PointY="6.375" />
+        <AssociationConnector Association="MPLISModel.HC_XA_HC_HUYEN_FK" />
+        <AssociationConnector Association="MPLISModel.HT_XA_NGUOIDUNG_HC_XA_FK" />
+        <AssociationConnector Association="MPLISModel.HT_XA_TOCHUC_HC_XA_FK" />
+        <AssociationConnector Association="MPLISModel.HC_HUYEN_HC_TINH_FK1" />
+        <AssociationConnector Association="MPLISModel.HC_TINH_HC_TINHTHAMSO" />
+        <AssociationConnector Association="MPLISModel.HT_ND_HT_CHND_FK" />
+        <AssociationConnector Association="MPLISModel.HT_CHUCNANG_HT_CHUCNANG_FK" />
+        <AssociationConnector Association="MPLISModel.HT_CN_NCN_HT_CN_FK" />
+        <AssociationConnector Association="MPLISModel.HT_QUYEN_HT_CHUCNANG_FK1" />
+        <AssociationConnector Association="MPLISModel.HT_CN_NCN_HT_NCN_FK" />
+        <AssociationConnector Association="MPLISModel.HT_LSTC_HT_ND_FK" />
+        <AssociationConnector Association="MPLISModel.HT_MENU_HT_MENU_FK" />
+        <AssociationConnector Association="MPLISModel.HT_NCN_M_HT_M_FK" />
+        <AssociationConnector Association="MPLISModel.HT_NGUOIDUNG_QUYEN_HT_NGU_FK1" />
+        <AssociationConnector Association="MPLISModel.HT_TC_ND_HT_ND_FK" />
+        <AssociationConnector Association="MPLISModel.HT_X_ND_HT_ND_FK" />
+        <AssociationConnector Association="MPLISModel.HT_NGUOIDUNG_QUYEN_HT_QUY_FK1" />
+        <AssociationConnector Association="MPLISModel.HT_NCN_HT_UD_FK" />
+        <AssociationConnector Association="MPLISModel.HT_NCN_M_HT_NCN_FK" />
+        <AssociationConnector Association="MPLISModel.HT_TC_NCN_HT_NCN_FK" />
+        <AssociationConnector Association="MPLISModel.HT_TC_NCN_HT_TC_FK" />
+        <AssociationConnector Association="MPLISModel.HT_TC_ND_HT_TC_FK" />
+        <AssociationConnector Association="MPLISModel.HT_TOCHUC_HT_TOCHUC_FK" />
+        <AssociationConnector Association="MPLISModel.HT_XA_TOCHUC_HT_TOCHUC_FK" />
+        <EntityTypeShape EntityType="MPLISModel.HS_HOSO" Width="1.5" PointX="3" PointY="33.125" />
+        <EntityTypeShape EntityType="MPLISModel.HS_LIENKETTHUADAT" Width="1.5" PointX="8.25" PointY="18.375" />
+        <EntityTypeShape EntityType="MPLISModel.HS_THANHPHANHOSO" Width="1.5" PointX="5.25" PointY="38.5" />
+        <AssociationConnector Association="MPLISModel.HS_HOSO_HC_XA_FK" />
+        <AssociationConnector Association="MPLISModel.HS_LIENKETTHUADAT_FK1" />
+        <AssociationConnector Association="MPLISModel.HS_THANHPHANHOSO_HS_HOSO_FK1" />
+        <AssociationConnector Association="MPLISModel.HS_TOTHUA_FK1" />
+        <EntityTypeShape EntityType="MPLISModel.HS_LICHSU" Width="1.5" PointX="8.25" PointY="22.5" />
+        <AssociationConnector Association="MPLISModel.HS_LS_HC_XA_FK" />
+        <AssociationConnector Association="MPLISModel.HS_LST_HS_HS_FK" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

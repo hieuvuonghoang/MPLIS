@@ -1,0 +1,150 @@
+﻿
+@{
+    ViewBag.Title = "Đăng nhập hệ thống";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+@{var UserCookie = "";
+    var PassNguoiDung = "";
+    var ReturnUrl = ViewBag.ReturnUrl;
+}
+@if (Request.Cookies["userName"] != null)
+{
+    UserCookie = Request.Cookies["userName"].Value;
+}
+@if (Request.Cookies["passNguoiDung"] != null)
+{
+    PassNguoiDung = "H1@iN9inhmpl8i6" + Request.Cookies["passNguoiDung"].Value;
+}
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MPLIS | Đăng nhập hệ thống</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <!-- MetisMenu CSS -->
+    <link href="~/Content/metisMenu.min.css" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link href="~/Content/sb-admin-2.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link href="~/Fonts/font-awesome.min.css" rel="stylesheet" />
+</head>
+<body class="hold-transition login-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="login-panel panel panel-default" style="margin-top:15%;">
+                    @using (Html.BeginForm("Login", "Authenticate"))
+                    {
+                        @Html.AntiForgeryToken()
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="panel-heading" style="height:86px; font-family:'Times New Roman', Times, serif ">
+                                    <h3 class="panel-title"><img src="~/Images/Picture1.png" width="67" height="60" /> &nbsp; Hệ thống thông tin đất đai quốc gia đa mục tiêu - MPLIS</h3>
+                                </div>
+                                <fieldset>
+                                    <div class="form-group" style="display:none;">
+                                        <input class="form-control" placeholder="Mật khẩu" name="txtReturnUrl" id="txtReturnUrl" value="@ReturnUrl">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Tên đăng nhập" name="txtemail" id="txtemail" value="@UserCookie">
+                                    </div>
+                                    <div class="form-group">
+                                        <input class="form-control" placeholder="Mật khẩu" name="txtpassword" id="txtpassword" type="password" value="@PassNguoiDung">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input name="chkGhiNhoTaikhoan" type="checkbox" value="RememberMe">Ghi nhớ tài khoản
+                                        </label>
+                                        <label style="font-size:x-small;float:right">
+                                            Phiên bản 3.0 (bản dịch 20180319)
+                                        </label>
+                                    </div>
+                                    <div class="checkbox">
+                                        <label style="font-size:x-small;float:right">
+                                            @Html.Raw("@2017 Tổng cục Quản lý đất đai - Bộ Tài nguyên và môi trường")
+                                        </label>
+                                    </div>
+                                    <!-- Change this to a button or input when using this as a form -->
+                                    <button class="btn btn-lg btn-success btn-block" onclick="return KiemTraDangNhap();">Đăng nhập</button>
+                                    @*<a href="~/Home/Index" class="btn btn-lg btn-success btn-block">Đăng nhập</a>*@
+                                    <br />
+                                    <a href="/Home/QuenMatKhau" style="font-family:'Times New Roman', Times, serif"><u>Quên mật khẩu ?</u></a><br>
+                                </fieldset>
+                            </form>
+                        </div>
+                    }
+                    <div class="row" style="margin-left:2%;">
+                        <label id="thongbao" style="color:red; ">@ViewBag.TB</label>
+                    </div>
+                </div>
+                <div class="login-panel panel panel-default" style="margin-top:1%;">
+                    <div class="row" style="margin-left:1%;">
+                        <h6><b>Các đơn vị phối hợp phát triển</b></h6>
+                    </div>
+                    <div class="row" style="margin-left:1%;">
+                        <div class="col-md-3" style="text-align:center;">
+                            <img src="~/Images/LogoCacDonViThamGiaDuAn/TongCucQuanLyDatDai.png" width="67" height="60" alt="Chưa có logo" />
+                        </div>
+                        <div class="col-md-3" style="text-align:center">
+                            <img src="~/Images/LogoCacDonViThamGiaDuAn/VNPT.jpg" width="67" height="60" alt="Chưa có logo" />
+                        </div>
+                        <div class="col-md-3" style="text-align:center">
+                            <img src="~/Images/LogoCacDonViThamGiaDuAn/FTP.jpg" width="67" height="60" alt="Chưa có logo" />
+                        </div>
+                        <div class="col-md-3" style="text-align:center">
+                            <img src="~/Images/LogoCacDonViThamGiaDuAn/HIPT.jpg" width="67" height="60" alt="Chưa có logo" />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:1%; height:5px;">
+                    </div>
+                    <div class="row" style="margin-left:1%;">
+                        <div class="col-md-3" style="text-align:center;">
+                            <img src="~/Images/LogoCacDonViThamGiaDuAn/TongCongTyTNMTMN.jpg" width="67" height="60" alt="Chưa có logo" />
+                        </div>
+                        <div class="col-md-3" style="text-align:center">
+                            <img src="~/Images/LogoCacDonViThamGiaDuAn/ToanCau.png" width="67" height="60" alt="Chưa có logo" />
+                        </div>
+                        <div class="col-md-3" style="text-align:center">
+                            <img src="~/Images/LogoCacDonViThamGiaDuAn/VidaGIS.jpg" width="67" height="60" alt="Chưa có logo" />
+                        </div>
+                        <div class="col-md-3" style="text-align:center">
+                            <img src="~/Images/LogoCacDonViThamGiaDuAn/TriNam.png" width="67" height="60" alt="Chưa có logo" />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-left:1%; height:5px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="~/Scripts/jQuery/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Scripts/bootstrap/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Scripts/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Scripts/sb-admin-2.js"></script>
+</body>
+</html>
+@*Kiem tra o nhap lieu khi dang nhap*@
+<script type="text/javascript">
+    function KiemTraDangNhap() {
+        if ($("#txtemail").val() == "") {
+            alert("Vui lòng nhập Tên đăng nhập !");
+            return false;
+        }
+        else {
+            if ($("#txtpassword").val() == "") {
+                alert("Vui lòng nhập Mật khẩu !");
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    }
+</script>

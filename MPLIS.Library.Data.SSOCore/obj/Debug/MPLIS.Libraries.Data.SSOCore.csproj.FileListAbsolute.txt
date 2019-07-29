@@ -1,0 +1,11 @@
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\MPLIS.Libraries.Data.SSOCore.dll.config
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\MPLIS.Libraries.Data.SSOCore.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\MPLIS.Libraries.Data.SSOCore.pdb
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\EntityFramework.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\EntityFramework.SqlServer.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\Oracle.ManagedDataAccess.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\EntityFramework.xml
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\bin\Debug\EntityFramework.SqlServer.xml
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\obj\Debug\MPLIS.Libraries.Data.SSOCore.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Data.SSOCore\obj\Debug\MPLIS.Libraries.Data.SSOCore.pdb

@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MPLISModelStoreContainer" CdmEntityContainer="MPLISEntities">
+    <EntitySetMapping Name="HC_DMKVHC">
+      <EntityTypeMapping TypeName="MPLISModel.HC_DMKVHC">
+        <MappingFragment StoreEntitySet="HC_DMKVHC">
+          <ScalarProperty Name="MAKVHC" ColumnName="MAKVHC" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="PHANLOAI" ColumnName="PHANLOAI" />
+          <ScalarProperty Name="TENKVHC" ColumnName="TENKVHC" />
+          <ScalarProperty Name="MAXA" ColumnName="MAXA" />
+          <ScalarProperty Name="HUYENID" ColumnName="HUYENID" />
+          <ScalarProperty Name="KVHCID" ColumnName="KVHCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HC_HUYEN">
+      <EntityTypeMapping TypeName="MPLISModel.HC_HUYEN">
+        <MappingFragment StoreEntitySet="HC_HUYEN">
+          <ScalarProperty Name="MAKVHC" ColumnName="MAKVHC" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="PHANLOAI" ColumnName="PHANLOAI" />
+          <ScalarProperty Name="TENHUYEN" ColumnName="TENHUYEN" />
+          <ScalarProperty Name="MAHUYEN" ColumnName="MAHUYEN" />
+          <ScalarProperty Name="TINHID" ColumnName="TINHID" />
+          <ScalarProperty Name="HUYENID" ColumnName="HUYENID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HC_TINH">
+      <EntityTypeMapping TypeName="MPLISModel.HC_TINH">
+        <MappingFragment StoreEntitySet="HC_TINH">
+          <ScalarProperty Name="MAKVHC" ColumnName="MAKVHC" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="PHANLOAI" ColumnName="PHANLOAI" />
+          <ScalarProperty Name="TENTINH" ColumnName="TENTINH" />
+          <ScalarProperty Name="MATINH" ColumnName="MATINH" />
+          <ScalarProperty Name="TINHID" ColumnName="TINHID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HC_TINHTHAMSO">
+      <EntityTypeMapping TypeName="MPLISModel.HC_TINHTHAMSO">
+        <MappingFragment StoreEntitySet="HC_TINHTHAMSO">
+          <ScalarProperty Name="THUADATSERVICELINKLOCAL" ColumnName="THUADATSERVICELINKLOCAL" />
+          <ScalarProperty Name="QUYHOACHCAPTINHFEATURESERVER" ColumnName="QUYHOACHCAPTINHFEATURESERVER" />
+          <ScalarProperty Name="QUYHOACHCAPHUYENFEATURESERVER" ColumnName="QUYHOACHCAPHUYENFEATURESERVER" />
+          <ScalarProperty Name="QUYHOACHCAPHUYENMAPSERVICELINK" ColumnName="QUYHOACHCAPHUYENMAPSERVICELINK" />
+          <ScalarProperty Name="QUYHOACHCAPHUYENLAYERINDEX" ColumnName="QUYHOACHCAPHUYENLAYERINDEX" />
+          <ScalarProperty Name="GEOMETRYSERVER" ColumnName="GEOMETRYSERVER" />
+          <ScalarProperty Name="LOADEXPORTSHAPEFILE" ColumnName="LOADEXPORTSHAPEFILE" />
+          <ScalarProperty Name="KVHCLAYERXAINDEX" ColumnName="KVHCLAYERXAINDEX" />
+          <ScalarProperty Name="KVHCLAYERHUYENINDEX" ColumnName="KVHCLAYERHUYENINDEX" />
+          <ScalarProperty Name="THUADATMAPSERVERINDEX" ColumnName="THUADATMAPSERVERINDEX" />
+          <ScalarProperty Name="THUADATMAPSERVERLINK" ColumnName="THUADATMAPSERVERLINK" />
+          <ScalarProperty Name="GETDATAEDITDESKTOP" ColumnName="GETDATAEDITDESKTOP" />
+          <ScalarProperty Name="LOADEXPORTGML" ColumnName="LOADEXPORTGML" />
+          <ScalarProperty Name="LOADEXPORTDGN" ColumnName="LOADEXPORTDGN" />
+          <ScalarProperty Name="KVHCLAYERTINHINDEX" ColumnName="KVHCLAYERTINHINDEX" />
+          <ScalarProperty Name="KVHCSERVICELINK" ColumnName="KVHCSERVICELINK" />
+          <ScalarProperty Name="GIADATGRLAYERINDEX" ColumnName="GIADATGRLAYERINDEX" />
+          <ScalarProperty Name="CAPGCNLAYERINDEX" ColumnName="CAPGCNLAYERINDEX" />
+          <ScalarProperty Name="MDSDLAYERINDEX" ColumnName="MDSDLAYERINDEX" />
+          <ScalarProperty Name="GIADATLAYERINDEX" ColumnName="GIADATLAYERINDEX" />
+          <ScalarProperty Name="HIENTRANGLAYERINDEX" ColumnName="HIENTRANGLAYERINDEX" />
+          <ScalarProperty Name="KHOANHDATLAYERINDEX" ColumnName="KHOANHDATLAYERINDEX" />
+          <ScalarProperty Name="QUYHOACHCAPTINHLAYERINDEX" ColumnName="QUYHOACHCAPTINHLAYERINDEX" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="KINHTUYENTRUC" ColumnName="KINHTUYENTRUC" />
+          <ScalarProperty Name="TINHID" ColumnName="TINHID" />
+          <ScalarProperty Name="CAPGCNSERVICELINK" ColumnName="CAPGCNSERVICELINK" />
+          <ScalarProperty Name="MDSDSERVICELINK" ColumnName="MDSDSERVICELINK" />
+          <ScalarProperty Name="GIADATGRSERVICELINK" ColumnName="GIADATGRSERVICELINK" />
+          <ScalarProperty Name="VETINHSERVICELINK" ColumnName="VETINHSERVICELINK" />
+          <ScalarProperty Name="GIADATSERVICELINK" ColumnName="GIADATSERVICELINK" />
+          <ScalarProperty Name="HIENTRANGSERVICELINK" ColumnName="HIENTRANGSERVICELINK" />
+          <ScalarProperty Name="KHOANHDATSERVICELINK" ColumnName="KHOANHDATSERVICELINK" />
+          <ScalarProperty Name="QUYHOACHCAPTINHMAPSERVICELINK" ColumnName="QUYHOACHCAPTINHMAPSERVICELINK" />
+          <ScalarProperty Name="BASEMAPSERVICELINK" ColumnName="BASEMAPSERVICELINK" />
+          <ScalarProperty Name="THUADATLAYERINDEX" ColumnName="THUADATLAYERINDEX" />
+          <ScalarProperty Name="THUADATSERVICELINK" ColumnName="THUADATSERVICELINK" />
+          <ScalarProperty Name="TINHTHAMSOID" ColumnName="TINHTHAMSOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_CAUHINH">
+      <EntityTypeMapping TypeName="MPLISModel.HT_CAUHINH">
+        <MappingFragment StoreEntitySet="HT_CAUHINH">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="MADONVIHANHCHINHID" ColumnName="MADONVIHANHCHINHID" />
+          <ScalarProperty Name="CAP" ColumnName="CAP" />
+          <ScalarProperty Name="GIATRI" ColumnName="GIATRI" />
+          <ScalarProperty Name="TENCAUHINH" ColumnName="TENCAUHINH" />
+          <ScalarProperty Name="CAUHINHID" ColumnName="CAUHINHID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_CAUHINHNGUOIDUNG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_CAUHINHNGUOIDUNG">
+        <MappingFragment StoreEntitySet="HT_CAUHINHNGUOIDUNG">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="GIATRI" ColumnName="GIATRI" />
+          <ScalarProperty Name="TENCAUHINH" ColumnName="TENCAUHINH" />
+          <ScalarProperty Name="NGUOIDUNGID" ColumnName="NGUOIDUNGID" />
+          <ScalarProperty Name="CAUHINHNGUOIDUNGID" ColumnName="CAUHINHNGUOIDUNGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_CHUCNANG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_CHUCNANG">
+        <MappingFragment StoreEntitySet="HT_CHUCNANG">
+          <ScalarProperty Name="CACBIENDAURA" ColumnName="CACBIENDAURA" />
+          <ScalarProperty Name="CACBIENDAUVAO" ColumnName="CACBIENDAUVAO" />
+          <ScalarProperty Name="THUCHIENTHUCONG" ColumnName="THUCHIENTHUCONG" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="CHOPHEPSUDUNG" ColumnName="CHOPHEPSUDUNG" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="TENCHUCNANG" ColumnName="TENCHUCNANG" />
+          <ScalarProperty Name="MACHUCNANG" ColumnName="MACHUCNANG" />
+          <ScalarProperty Name="KHOACHAID" ColumnName="KHOACHAID" />
+          <ScalarProperty Name="CHUCNANGID" ColumnName="CHUCNANGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_CHUCNANG_NHOMCHUCNANG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_CHUCNANG_NHOMCHUCNANG">
+        <MappingFragment StoreEntitySet="HT_CHUCNANG_NHOMCHUCNANG">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="CHUCNANGID" ColumnName="CHUCNANGID" />
+          <ScalarProperty Name="NHOMCHUCNANGID" ColumnName="NHOMCHUCNANGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_LICHSUTRUYCAP">
+      <EntityTypeMapping TypeName="MPLISModel.HT_LICHSUTRUYCAP">
+        <MappingFragment StoreEntitySet="HT_LICHSUTRUYCAP">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="LOAIHANHDONG" ColumnName="LOAIHANHDONG" />
+          <ScalarProperty Name="NAM" ColumnName="NAM" />
+          <ScalarProperty Name="NGUOIDUNGID" ColumnName="NGUOIDUNGID" />
+          <ScalarProperty Name="LICHSUTRUYCAPID" ColumnName="LICHSUTRUYCAPID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_MAUGIAYTOKEMTHEOHS">
+      <EntityTypeMapping TypeName="MPLISModel.HT_MAUGIAYTOKEMTHEOHS">
+        <MappingFragment StoreEntitySet="HT_MAUGIAYTOKEMTHEOHS">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="TEMPLATE" ColumnName="TEMPLATE" />
+          <ScalarProperty Name="MADONVIHANHCHINHID" ColumnName="MADONVIHANHCHINHID" />
+          <ScalarProperty Name="CAP" ColumnName="CAP" />
+          <ScalarProperty Name="GIAYTOKEMTHEOHSID" ColumnName="GIAYTOKEMTHEOHSID" />
+          <ScalarProperty Name="MAUGIAYTOKEMTHEOHSID" ColumnName="MAUGIAYTOKEMTHEOHSID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_MENU">
+      <EntityTypeMapping TypeName="MPLISModel.HT_MENU">
+        <MappingFragment StoreEntitySet="HT_MENU">
+          <ScalarProperty Name="MAMENU" ColumnName="MAMENU" />
+          <ScalarProperty Name="CONTROLLER" ColumnName="CONTROLLER" />
+          <ScalarProperty Name="ACTION" ColumnName="ACTION" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="CHOPHEPSUDUNG" ColumnName="CHOPHEPSUDUNG" />
+          <ScalarProperty Name="ICON" ColumnName="ICON" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="TENMENU" ColumnName="TENMENU" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="UNGDUNGID" ColumnName="UNGDUNGID" />
+          <ScalarProperty Name="KHOACHAID" ColumnName="KHOACHAID" />
+          <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_NGUOIDUNG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_NGUOIDUNG">
+        <MappingFragment StoreEntitySet="HT_NGUOIDUNG">
+          <ScalarProperty Name="LOAINGUOIDUNG" ColumnName="LOAINGUOIDUNG" />
+          <ScalarProperty Name="DONVIHANHCHINHID" ColumnName="DONVIHANHCHINHID" />
+          <ScalarProperty Name="CAPNGUOIDUNG" ColumnName="CAPNGUOIDUNG" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="CHOPHEPSUDUNG" ColumnName="CHOPHEPSUDUNG" />
+          <ScalarProperty Name="THOIDIEMMATKHAUHETHIEULUC" ColumnName="THOIDIEMMATKHAUHETHIEULUC" />
+          <ScalarProperty Name="THOIDIEMMATKHAUCOHIEULUC" ColumnName="THOIDIEMMATKHAUCOHIEULUC" />
+          <ScalarProperty Name="PHAITHAYDOIMATKHAU" ColumnName="PHAITHAYDOIMATKHAU" />
+          <ScalarProperty Name="ANHBIEUTUONG" ColumnName="ANHBIEUTUONG" />
+          <ScalarProperty Name="READONLY" ColumnName="READONLY" />
+          <ScalarProperty Name="DIACHI" ColumnName="DIACHI" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SODIENTHOAI2" ColumnName="SODIENTHOAI2" />
+          <ScalarProperty Name="SODIENTHOAI" ColumnName="SODIENTHOAI" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="HOTENNGUOIDUNG" ColumnName="HOTENNGUOIDUNG" />
+          <ScalarProperty Name="MATKHAU" ColumnName="MATKHAU" />
+          <ScalarProperty Name="TENDANGNHAP" ColumnName="TENDANGNHAP" />
+          <ScalarProperty Name="NGUOIDUNGID" ColumnName="NGUOIDUNGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_NGUOIDUNG_QUYEN">
+      <EntityTypeMapping TypeName="MPLISModel.HT_NGUOIDUNG_QUYEN">
+        <MappingFragment StoreEntitySet="HT_NGUOIDUNG_QUYEN">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="KICHHOATQUYEN" ColumnName="KICHHOATQUYEN" />
+          <ScalarProperty Name="QUYENID" ColumnName="QUYENID" />
+          <ScalarProperty Name="NGUOIDUNGID" ColumnName="NGUOIDUNGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_NHOMCHUCNANG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_NHOMCHUCNANG">
+        <MappingFragment StoreEntitySet="HT_NHOMCHUCNANG">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="TENNHOM" ColumnName="TENNHOM" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="UNGDUNGID" ColumnName="UNGDUNGID" />
+          <ScalarProperty Name="NHOMCHUCNANGID" ColumnName="NHOMCHUCNANGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_NHOMCHUCNANG_MENU">
+      <EntityTypeMapping TypeName="MPLISModel.HT_NHOMCHUCNANG_MENU">
+        <MappingFragment StoreEntitySet="HT_NHOMCHUCNANG_MENU">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="NHOMCHUCNANGID" ColumnName="NHOMCHUCNANGID" />
+          <ScalarProperty Name="MENUID" ColumnName="MENUID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_QUYEN">
+      <EntityTypeMapping TypeName="MPLISModel.HT_QUYEN">
+        <MappingFragment StoreEntitySet="HT_QUYEN">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="ACTIONNAME" ColumnName="ACTIONNAME" />
+          <ScalarProperty Name="CONTROLLERNAME" ColumnName="CONTROLLERNAME" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="CHUCNANGID" ColumnName="CHUCNANGID" />
+          <ScalarProperty Name="QUYENID" ColumnName="QUYENID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_THONGBAO">
+      <EntityTypeMapping TypeName="MPLISModel.HT_THONGBAO">
+        <MappingFragment StoreEntitySet="HT_THONGBAO">
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="VOHIEUHOA" ColumnName="VOHIEUHOA" />
+          <ScalarProperty Name="TIEUDE" ColumnName="TIEUDE" />
+          <ScalarProperty Name="NGAYXEM" ColumnName="NGAYXEM" />
+          <ScalarProperty Name="NGAYNHAN" ColumnName="NGAYNHAN" />
+          <ScalarProperty Name="DAXEM" ColumnName="DAXEM" />
+          <ScalarProperty Name="LINK" ColumnName="LINK" />
+          <ScalarProperty Name="NOIDUNG" ColumnName="NOIDUNG" />
+          <ScalarProperty Name="NGUOIDUNGID" ColumnName="NGUOIDUNGID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_TOCHUC">
+      <EntityTypeMapping TypeName="MPLISModel.HT_TOCHUC">
+        <MappingFragment StoreEntitySet="HT_TOCHUC">
+          <ScalarProperty Name="MATOCHUC" ColumnName="MATOCHUC" />
+          <ScalarProperty Name="CAPTOCHUC" ColumnName="CAPTOCHUC" />
+          <ScalarProperty Name="DONVIHANHCHINHID" ColumnName="DONVIHANHCHINHID" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="TENTOCHUC" ColumnName="TENTOCHUC" />
+          <ScalarProperty Name="KHOACHAID" ColumnName="KHOACHAID" />
+          <ScalarProperty Name="TOCHUCID" ColumnName="TOCHUCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_TOCHUC_NGUOIDUNG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_TOCHUC_NGUOIDUNG">
+        <MappingFragment StoreEntitySet="HT_TOCHUC_NGUOIDUNG">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="CHUCVU" ColumnName="CHUCVU" />
+          <ScalarProperty Name="NGUOIDUNGID" ColumnName="NGUOIDUNGID" />
+          <ScalarProperty Name="TOCHUCID" ColumnName="TOCHUCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_TOCHUC_NHOMCHUCNANG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_TOCHUC_NHOMCHUCNANG">
+        <MappingFragment StoreEntitySet="HT_TOCHUC_NHOMCHUCNANG">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="NHOMCHUCNANGID" ColumnName="NHOMCHUCNANGID" />
+          <ScalarProperty Name="TOCHUCID" ColumnName="TOCHUCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_UNGDUNG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_UNGDUNG">
+        <MappingFragment StoreEntitySet="HT_UNGDUNG">
+          <ScalarProperty Name="MAUNGDUNG" ColumnName="MAUNGDUNG" />
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="THUTUSAPXEP" ColumnName="THUTUSAPXEP" />
+          <ScalarProperty Name="CHOPHEPSUDUNG" ColumnName="CHOPHEPSUDUNG" />
+          <ScalarProperty Name="ICON" ColumnName="ICON" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="TENUNGDUNG" ColumnName="TENUNGDUNG" />
+          <ScalarProperty Name="UNGDUNGID" ColumnName="UNGDUNGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_XA_NGUOIDUNG">
+      <EntityTypeMapping TypeName="MPLISModel.HT_XA_NGUOIDUNG">
+        <MappingFragment StoreEntitySet="HT_XA_NGUOIDUNG">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="XAID" ColumnName="XAID" />
+          <ScalarProperty Name="NGUOIDUNGID" ColumnName="NGUOIDUNGID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HT_XA_TOCHUC">
+      <EntityTypeMapping TypeName="MPLISModel.HT_XA_TOCHUC">
+        <MappingFragment StoreEntitySet="HT_XA_TOCHUC">
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="uId" ColumnName="uId" />
+          <ScalarProperty Name="XAID" ColumnName="XAID" />
+          <ScalarProperty Name="TOCHUCID" ColumnName="TOCHUCID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HS_HOSO">
+      <EntityTypeMapping TypeName="MPLISModel.HS_HOSO">
+        <MappingFragment StoreEntitySet="HS_HOSO">
+          <ScalarProperty Name="HOSOTIEPNHANID" ColumnName="HOSOTIEPNHANID" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="DALIENKETCSDL_TT" ColumnName="DALIENKETCSDL_TT" />
+          <ScalarProperty Name="DALIENKETCSDL_KG" ColumnName="DALIENKETCSDL_KG" />
+          <ScalarProperty Name="GHICHU" ColumnName="GHICHU" />
+          <ScalarProperty Name="TENHOP" ColumnName="TENHOP" />
+          <ScalarProperty Name="HOP" ColumnName="HOP" />
+          <ScalarProperty Name="NGAN" ColumnName="NGAN" />
+          <ScalarProperty Name="KE" ColumnName="KE" />
+          <ScalarProperty Name="PHONG" ColumnName="PHONG" />
+          <ScalarProperty Name="NGAYHOSO" ColumnName="NGAYHOSO" />
+          <ScalarProperty Name="SOTHUADAIDIEN" ColumnName="SOTHUADAIDIEN" />
+          <ScalarProperty Name="SOTODAIDIEN" ColumnName="SOTODAIDIEN" />
+          <ScalarProperty Name="TENHOSO" ColumnName="TENHOSO" />
+          <ScalarProperty Name="MAHOSO_TAM" ColumnName="MAHOSO_TAM" />
+          <ScalarProperty Name="MAHOSO_TB" ColumnName="MAHOSO_TB" />
+          <ScalarProperty Name="MAHOSO_MB" ColumnName="MAHOSO_MB" />
+          <ScalarProperty Name="MAHOSO_ST" ColumnName="MAHOSO_ST" />
+          <ScalarProperty Name="MAHOSO" ColumnName="MAHOSO" />
+          <ScalarProperty Name="XAID" ColumnName="XAID" />
+          <ScalarProperty Name="HOSOID" ColumnName="HOSOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HS_LIENKETTHUADAT">
+      <EntityTypeMapping TypeName="MPLISModel.HS_LIENKETTHUADAT">
+        <MappingFragment StoreEntitySet="HS_LIENKETTHUADAT">
+          <ScalarProperty Name="THUAID" ColumnName="THUAID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="XAID" ColumnName="XAID" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="SOTHUA" ColumnName="SOTHUA" />
+          <ScalarProperty Name="SOTO" ColumnName="SOTO" />
+          <ScalarProperty Name="HOSOID" ColumnName="HOSOID" />
+          <ScalarProperty Name="TOTHUAID" ColumnName="TOTHUAID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HS_THANHPHANHOSO">
+      <EntityTypeMapping TypeName="MPLISModel.HS_THANHPHANHOSO">
+        <MappingFragment StoreEntitySet="HS_THANHPHANHOSO">
+          <ScalarProperty Name="SOBIENNHAN" ColumnName="SOBIENNHAN" />
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="DUONGDAN" ColumnName="DUONGDAN" />
+          <ScalarProperty Name="KICHTHUOC" ColumnName="KICHTHUOC" />
+          <ScalarProperty Name="TENTEPDULIEU" ColumnName="TENTEPDULIEU" />
+          <ScalarProperty Name="GIAYTOKEMTHEOHSID" ColumnName="GIAYTOKEMTHEOHSID" />
+          <ScalarProperty Name="HOSOID" ColumnName="HOSOID" />
+          <ScalarProperty Name="THANHPHANHOSOID" ColumnName="THANHPHANHOSOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HS_LICHSU">
+      <EntityTypeMapping TypeName="MPLISModel.HS_LICHSU">
+        <MappingFragment StoreEntitySet="HS_LICHSU">
+          <ScalarProperty Name="OID" ColumnName="OID" />
+          <ScalarProperty Name="THOIDIEMCAPNHAT" ColumnName="THOIDIEMCAPNHAT" />
+          <ScalarProperty Name="NGUOICAPNHATID" ColumnName="NGUOICAPNHATID" />
+          <ScalarProperty Name="THOIDIEMKHOITAO" ColumnName="THOIDIEMKHOITAO" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+          <ScalarProperty Name="HOSOSAUID" ColumnName="HOSOSAUID" />
+          <ScalarProperty Name="HOSOTRUOCID" ColumnName="HOSOTRUOCID" />
+          <ScalarProperty Name="HOSOID" ColumnName="HOSOID" />
+          <ScalarProperty Name="XAID" ColumnName="XAID" />
+          <ScalarProperty Name="LICHSUHOSOID" ColumnName="LICHSUHOSOID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

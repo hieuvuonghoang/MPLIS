@@ -1,0 +1,972 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MPLISModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="12.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="HC_DMKVHC">
+    <Key>
+      <PropertyRef Name="KVHCID" />
+    </Key>
+    <Property Name="KVHCID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="HUYENID" Type="varchar2" MaxLength="36" />
+    <Property Name="MAXA" Type="varchar2" MaxLength="5" />
+    <Property Name="TENKVHC" Type="varchar2" MaxLength="100" />
+    <Property Name="PHANLOAI" Type="varchar2" MaxLength="20" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="5" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="MAKVHC" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="HC_HUYEN">
+    <Key>
+      <PropertyRef Name="HUYENID" />
+    </Key>
+    <Property Name="HUYENID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="TINHID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="MAHUYEN" Type="varchar2" MaxLength="3" />
+    <Property Name="TENHUYEN" Type="varchar2" MaxLength="80" />
+    <Property Name="PHANLOAI" Type="varchar2" MaxLength="20" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="3" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="MAKVHC" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="HC_TINH">
+    <Key>
+      <PropertyRef Name="TINHID" />
+    </Key>
+    <Property Name="TINHID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="MATINH" Type="varchar2" MaxLength="2" />
+    <Property Name="TENTINH" Type="varchar2" MaxLength="60" />
+    <Property Name="PHANLOAI" Type="varchar2" MaxLength="20" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="2" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="MAKVHC" Type="varchar2" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="HC_TINHTHAMSO">
+    <Key>
+      <PropertyRef Name="TINHTHAMSOID" />
+    </Key>
+    <Property Name="TINHTHAMSOID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="THUADATSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="THUADATLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="BASEMAPSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="QUYHOACHCAPTINHMAPSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="KHOANHDATSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="HIENTRANGSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="GIADATSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="VETINHSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="GIADATGRSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="MDSDSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="CAPGCNSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="TINHID" Type="varchar2" MaxLength="36" />
+    <Property Name="KINHTUYENTRUC" Type="number" Precision="5" Scale="2" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="QUYHOACHCAPTINHLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="KHOANHDATLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="HIENTRANGLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="GIADATLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="MDSDLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="CAPGCNLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="GIADATGRLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="KVHCSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="KVHCLAYERTINHINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="LOADEXPORTDGN" Type="varchar2" MaxLength="250" />
+    <Property Name="LOADEXPORTGML" Type="varchar2" MaxLength="250" />
+    <Property Name="GETDATAEDITDESKTOP" Type="varchar2" MaxLength="250" />
+    <Property Name="THUADATMAPSERVERLINK" Type="varchar2" MaxLength="250" />
+    <Property Name="THUADATMAPSERVERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="KVHCLAYERHUYENINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="KVHCLAYERXAINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="LOADEXPORTSHAPEFILE" Type="varchar2" MaxLength="250" />
+    <Property Name="GEOMETRYSERVER" Type="varchar2" MaxLength="250" />
+    <Property Name="QUYHOACHCAPHUYENLAYERINDEX" Type="number" Precision="38" Scale="0" />
+    <Property Name="QUYHOACHCAPHUYENMAPSERVICELINK" Type="varchar2" MaxLength="250" />
+    <Property Name="QUYHOACHCAPHUYENFEATURESERVER" Type="varchar2" MaxLength="250" />
+    <Property Name="QUYHOACHCAPTINHFEATURESERVER" Type="varchar2" MaxLength="250" />
+    <Property Name="THUADATSERVICELINKLOCAL" Type="varchar2" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="HS_HOSO">
+    <Key>
+      <PropertyRef Name="HOSOID" />
+    </Key>
+    <Property Name="HOSOID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="XAID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="MAHOSO" Type="varchar2" MaxLength="20" />
+    <Property Name="MAHOSO_ST" Type="varchar2" MaxLength="6" />
+    <Property Name="MAHOSO_MB" Type="varchar2" MaxLength="2" />
+    <Property Name="MAHOSO_TB" Type="varchar2" MaxLength="3" />
+    <Property Name="MAHOSO_TAM" Type="varchar2" MaxLength="20" />
+    <Property Name="TENHOSO" Type="varchar2" MaxLength="100" />
+    <Property Name="SOTODAIDIEN" Type="varchar2" MaxLength="15" />
+    <Property Name="SOTHUADAIDIEN" Type="varchar2" MaxLength="15" />
+    <Property Name="NGAYHOSO" Type="date" />
+    <Property Name="PHONG" Type="varchar2" MaxLength="36" />
+    <Property Name="KE" Type="varchar2" MaxLength="36" />
+    <Property Name="NGAN" Type="varchar2" MaxLength="36" />
+    <Property Name="HOP" Type="varchar2" MaxLength="36" />
+    <Property Name="TENHOP" Type="varchar2" MaxLength="100" />
+    <Property Name="GHICHU" Type="varchar2" MaxLength="255" />
+    <Property Name="DALIENKETCSDL_KG" Type="number" Precision="1" Scale="0" />
+    <Property Name="DALIENKETCSDL_TT" Type="number" Precision="1" Scale="0" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="OID" Type="varchar2" MaxLength="36" />
+    <Property Name="HOSOTIEPNHANID" Type="varchar2" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="HS_LICHSU">
+    <Key>
+      <PropertyRef Name="LICHSUHOSOID" />
+    </Key>
+    <Property Name="LICHSUHOSOID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="XAID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="HOSOID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="HOSOTRUOCID" Type="varchar2" MaxLength="36" />
+    <Property Name="HOSOSAUID" Type="varchar2" MaxLength="36" />
+    <Property Name="UID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="OID" Type="varchar2" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="HS_LIENKETTHUADAT">
+    <Key>
+      <PropertyRef Name="TOTHUAID" />
+    </Key>
+    <Property Name="TOTHUAID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="HOSOID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="SOTO" Type="nvarchar2" MaxLength="25" />
+    <Property Name="SOTHUA" Type="nvarchar2" MaxLength="25" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="XAID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="THUAID" Type="varchar2" MaxLength="36" />
+  </EntityType>
+  <EntityType Name="HS_THANHPHANHOSO">
+    <Key>
+      <PropertyRef Name="THANHPHANHOSOID" />
+    </Key>
+    <Property Name="THANHPHANHOSOID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="HOSOID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="GIAYTOKEMTHEOHSID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="TENTEPDULIEU" Type="varchar2" MaxLength="100" />
+    <Property Name="KICHTHUOC" Type="number" Precision="38" Scale="0" />
+    <Property Name="DUONGDAN" Type="varchar2" MaxLength="2000" />
+    <Property Name="UID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="OID" Type="varchar2" MaxLength="36" />
+    <Property Name="SOBIENNHAN" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="HT_CAUHINH">
+    <Key>
+      <PropertyRef Name="CAUHINHID" />
+    </Key>
+    <Property Name="CAUHINHID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="TENCAUHINH" Type="varchar2" MaxLength="50" />
+    <Property Name="GIATRI" Type="varchar2" MaxLength="255" />
+    <Property Name="CAP" Type="number" Precision="2" Scale="0" />
+    <Property Name="MADONVIHANHCHINHID" Type="varchar2" MaxLength="36" />
+    <Property Name="UID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_CAUHINHNGUOIDUNG">
+    <Key>
+      <PropertyRef Name="CAUHINHNGUOIDUNGID" />
+    </Key>
+    <Property Name="CAUHINHNGUOIDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="NGUOIDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="TENCAUHINH" Type="varchar2" MaxLength="50" />
+    <Property Name="GIATRI" Type="varchar2" MaxLength="255" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_CHUCNANG">
+    <Key>
+      <PropertyRef Name="CHUCNANGID" />
+    </Key>
+    <Property Name="CHUCNANGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="KHOACHAID" Type="varchar2" MaxLength="36" />
+    <Property Name="MACHUCNANG" Type="varchar2" MaxLength="30" />
+    <Property Name="TENCHUCNANG" Type="varchar2" MaxLength="255" />
+    <Property Name="URL" Type="varchar2" MaxLength="255" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="15" />
+    <Property Name="CHOPHEPSUDUNG" Type="char" MaxLength="1" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="THUCHIENTHUCONG" Type="number" Precision="1" Scale="0" />
+    <Property Name="CACBIENDAUVAO" Type="varchar2" MaxLength="120" />
+    <Property Name="CACBIENDAURA" Type="varchar2" MaxLength="120" />
+  </EntityType>
+  <EntityType Name="HT_CHUCNANG_NHOMCHUCNANG">
+    <Key>
+      <PropertyRef Name="NHOMCHUCNANGID" />
+      <PropertyRef Name="CHUCNANGID" />
+    </Key>
+    <Property Name="NHOMCHUCNANGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="CHUCNANGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_LICHSUTRUYCAP">
+    <Key>
+      <PropertyRef Name="LICHSUTRUYCAPID" />
+    </Key>
+    <Property Name="LICHSUTRUYCAPID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="NGUOIDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="NAM" Type="number" Precision="4" Scale="0" />
+    <Property Name="LOAIHANHDONG" Type="char" MaxLength="1" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_MAUGIAYTOKEMTHEOHS">
+    <Key>
+      <PropertyRef Name="MAUGIAYTOKEMTHEOHSID" />
+    </Key>
+    <Property Name="MAUGIAYTOKEMTHEOHSID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="GIAYTOKEMTHEOHSID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="CAP" Type="number" Precision="2" Scale="0" />
+    <Property Name="MADONVIHANHCHINHID" Type="varchar2" MaxLength="36" />
+    <Property Name="TEMPLATE" Type="blob" />
+    <Property Name="UID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_MENU">
+    <Key>
+      <PropertyRef Name="MENUID" />
+    </Key>
+    <Property Name="MENUID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="KHOACHAID" Type="varchar2" MaxLength="36" />
+    <Property Name="UNGDUNGID" Type="varchar2" MaxLength="36" />
+    <Property Name="URL" Type="varchar2" MaxLength="255" />
+    <Property Name="TENMENU" Type="varchar2" MaxLength="80" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="ICON" Type="blob" />
+    <Property Name="CHOPHEPSUDUNG" Type="char" MaxLength="1" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="50" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="ACTION" Type="varchar2" MaxLength="255" />
+    <Property Name="CONTROLLER" Type="varchar2" MaxLength="255" />
+    <Property Name="MAMENU" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="HT_NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="NGUOIDUNGID" />
+    </Key>
+    <Property Name="NGUOIDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="TENDANGNHAP" Type="varchar2" MaxLength="20" />
+    <Property Name="MATKHAU" Type="varchar2" MaxLength="100" />
+    <Property Name="HOTENNGUOIDUNG" Type="varchar2" MaxLength="100" />
+    <Property Name="GIOITINH" Type="char" MaxLength="1" />
+    <Property Name="SODIENTHOAI" Type="varchar2" MaxLength="15" />
+    <Property Name="SODIENTHOAI2" Type="varchar2" MaxLength="15" />
+    <Property Name="EMAIL" Type="varchar2" MaxLength="50" />
+    <Property Name="DIACHI" Type="varchar2" MaxLength="150" />
+    <Property Name="READONLY" Type="number" Precision="1" Scale="0" />
+    <Property Name="ANHBIEUTUONG" Type="blob" />
+    <Property Name="PHAITHAYDOIMATKHAU" Type="char" MaxLength="1" />
+    <Property Name="THOIDIEMMATKHAUCOHIEULUC" Type="date" />
+    <Property Name="THOIDIEMMATKHAUHETHIEULUC" Type="date" />
+    <Property Name="CHOPHEPSUDUNG" Type="char" MaxLength="1" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="CAPNGUOIDUNG" Type="varchar2" MaxLength="2" />
+    <Property Name="DONVIHANHCHINHID" Type="varchar2" MaxLength="36" />
+    <Property Name="LOAINGUOIDUNG" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="HT_NGUOIDUNG_QUYEN">
+    <Key>
+      <PropertyRef Name="NGUOIDUNGID" />
+      <PropertyRef Name="QUYENID" />
+    </Key>
+    <Property Name="NGUOIDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="QUYENID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="KICHHOATQUYEN" Type="number" Precision="1" Scale="0" />
+    <Property Name="UID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_NHOMCHUCNANG">
+    <Key>
+      <PropertyRef Name="NHOMCHUCNANGID" />
+    </Key>
+    <Property Name="NHOMCHUCNANGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="UNGDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="URL" Type="varchar2" MaxLength="255" />
+    <Property Name="TENNHOM" Type="varchar2" MaxLength="255" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="10" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_NHOMCHUCNANG_MENU">
+    <Key>
+      <PropertyRef Name="MENUID" />
+      <PropertyRef Name="NHOMCHUCNANGID" />
+    </Key>
+    <Property Name="MENUID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="NHOMCHUCNANGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_QUYEN">
+    <Key>
+      <PropertyRef Name="QUYENID" />
+    </Key>
+    <Property Name="QUYENID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="CHUCNANGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="15" />
+    <Property Name="CONTROLLERNAME" Type="varchar2" MaxLength="150" />
+    <Property Name="ACTIONNAME" Type="varchar2" MaxLength="150" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="UID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_THONGBAO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar2" MaxLength="200" Nullable="false" />
+    <Property Name="NGUOIDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="NOIDUNG" Type="nvarchar2" MaxLength="2000" Nullable="false" />
+    <Property Name="LINK" Type="nvarchar2" MaxLength="255" Nullable="false" />
+    <Property Name="DAXEM" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NGAYNHAN" Type="date" Nullable="false" />
+    <Property Name="NGAYXEM" Type="date" Nullable="false" />
+    <Property Name="TIEUDE" Type="varchar2" MaxLength="255" Nullable="false" />
+    <Property Name="VOHIEUHOA" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_TOCHUC">
+    <Key>
+      <PropertyRef Name="TOCHUCID" />
+    </Key>
+    <Property Name="TOCHUCID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="KHOACHAID" Type="varchar2" MaxLength="36" />
+    <Property Name="TENTOCHUC" Type="varchar2" MaxLength="150" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="10" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="DONVIHANHCHINHID" Type="varchar2" MaxLength="36" />
+    <Property Name="CAPTOCHUC" Type="number" Precision="2" Scale="0" />
+    <Property Name="MATOCHUC" Type="varchar2" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="HT_TOCHUC_NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="TOCHUCID" />
+      <PropertyRef Name="NGUOIDUNGID" />
+    </Key>
+    <Property Name="TOCHUCID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="NGUOIDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="CHUCVU" Type="varchar2" MaxLength="50" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_TOCHUC_NHOMCHUCNANG">
+    <Key>
+      <PropertyRef Name="TOCHUCID" />
+      <PropertyRef Name="NHOMCHUCNANGID" />
+    </Key>
+    <Property Name="TOCHUCID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="NHOMCHUCNANGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_UNGDUNG">
+    <Key>
+      <PropertyRef Name="UNGDUNGID" />
+    </Key>
+    <Property Name="UNGDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="TENUNGDUNG" Type="varchar2" MaxLength="80" />
+    <Property Name="MOTA" Type="varchar2" MaxLength="255" />
+    <Property Name="ICON" Type="blob" />
+    <Property Name="CHOPHEPSUDUNG" Type="char" MaxLength="1" />
+    <Property Name="THUTUSAPXEP" Type="varchar2" MaxLength="10" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+    <Property Name="URL" Type="varchar2" MaxLength="255" />
+    <Property Name="MAUNGDUNG" Type="varchar2" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="HT_XA_NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="NGUOIDUNGID" />
+      <PropertyRef Name="XAID" />
+    </Key>
+    <Property Name="NGUOIDUNGID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="XAID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <EntityType Name="HT_XA_TOCHUC">
+    <Key>
+      <PropertyRef Name="TOCHUCID" />
+      <PropertyRef Name="XAID" />
+    </Key>
+    <Property Name="TOCHUCID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="XAID" Type="varchar2" MaxLength="36" Nullable="false" />
+    <Property Name="uId" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMKHOITAO" Type="date" />
+    <Property Name="NGUOICAPNHATID" Type="varchar2" MaxLength="36" />
+    <Property Name="THOIDIEMCAPNHAT" Type="date" />
+  </EntityType>
+  <Association Name="HC_HUYEN_HC_TINH_FK1">
+    <End Role="HC_TINH" Type="Self.HC_TINH" Multiplicity="1" />
+    <End Role="HC_HUYEN" Type="Self.HC_HUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_TINH">
+        <PropertyRef Name="TINHID" />
+      </Principal>
+      <Dependent Role="HC_HUYEN">
+        <PropertyRef Name="TINHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HC_TINH_HC_TINHTHAMSO">
+    <End Role="HC_TINH" Type="Self.HC_TINH" Multiplicity="0..1" />
+    <End Role="HC_TINHTHAMSO" Type="Self.HC_TINHTHAMSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_TINH">
+        <PropertyRef Name="TINHID" />
+      </Principal>
+      <Dependent Role="HC_TINHTHAMSO">
+        <PropertyRef Name="TINHID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HC_XA_HC_HUYEN_FK">
+    <End Role="HC_HUYEN" Type="Self.HC_HUYEN" Multiplicity="0..1" />
+    <End Role="HC_DMKVHC" Type="Self.HC_DMKVHC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_HUYEN">
+        <PropertyRef Name="HUYENID" />
+      </Principal>
+      <Dependent Role="HC_DMKVHC">
+        <PropertyRef Name="HUYENID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_HOSO_HC_XA_FK">
+    <End Role="HC_DMKVHC" Type="Self.HC_DMKVHC" Multiplicity="1" />
+    <End Role="HS_HOSO" Type="Self.HS_HOSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HS_HOSO">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_LIENKETTHUADAT_FK1">
+    <End Role="HC_DMKVHC" Type="Self.HC_DMKVHC" Multiplicity="1" />
+    <End Role="HS_LIENKETTHUADAT" Type="Self.HS_LIENKETTHUADAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HS_LIENKETTHUADAT">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_LS_HC_XA_FK">
+    <End Role="HC_DMKVHC" Type="Self.HC_DMKVHC" Multiplicity="1" />
+    <End Role="HS_LICHSU" Type="Self.HS_LICHSU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HS_LICHSU">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_LST_HS_HS_FK">
+    <End Role="HS_HOSO" Type="Self.HS_HOSO" Multiplicity="1" />
+    <End Role="HS_LICHSU" Type="Self.HS_LICHSU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HS_HOSO">
+        <PropertyRef Name="HOSOID" />
+      </Principal>
+      <Dependent Role="HS_LICHSU">
+        <PropertyRef Name="HOSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_THANHPHANHOSO_HS_HOSO_FK1">
+    <End Role="HS_HOSO" Type="Self.HS_HOSO" Multiplicity="1" />
+    <End Role="HS_THANHPHANHOSO" Type="Self.HS_THANHPHANHOSO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HS_HOSO">
+        <PropertyRef Name="HOSOID" />
+      </Principal>
+      <Dependent Role="HS_THANHPHANHOSO">
+        <PropertyRef Name="HOSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HS_TOTHUA_FK1">
+    <End Role="HS_HOSO" Type="Self.HS_HOSO" Multiplicity="1" />
+    <End Role="HS_LIENKETTHUADAT" Type="Self.HS_LIENKETTHUADAT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HS_HOSO">
+        <PropertyRef Name="HOSOID" />
+      </Principal>
+      <Dependent Role="HS_LIENKETTHUADAT">
+        <PropertyRef Name="HOSOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_CHUCNANG_HT_CHUCNANG_FK">
+    <End Role="HT_CHUCNANG" Type="Self.HT_CHUCNANG" Multiplicity="0..1" />
+    <End Role="HT_CHUCNANG1" Type="Self.HT_CHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_CHUCNANG">
+        <PropertyRef Name="CHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_CHUCNANG1">
+        <PropertyRef Name="KHOACHAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_CN_NCN_HT_CN_FK">
+    <End Role="HT_CHUCNANG" Type="Self.HT_CHUCNANG" Multiplicity="1" />
+    <End Role="HT_CHUCNANG_NHOMCHUCNANG" Type="Self.HT_CHUCNANG_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_CHUCNANG">
+        <PropertyRef Name="CHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_CHUCNANG_NHOMCHUCNANG">
+        <PropertyRef Name="CHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_CN_NCN_HT_NCN_FK">
+    <End Role="HT_NHOMCHUCNANG" Type="Self.HT_NHOMCHUCNANG" Multiplicity="1" />
+    <End Role="HT_CHUCNANG_NHOMCHUCNANG" Type="Self.HT_CHUCNANG_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_CHUCNANG_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_LSTC_HT_ND_FK">
+    <End Role="HT_NGUOIDUNG" Type="Self.HT_NGUOIDUNG" Multiplicity="1" />
+    <End Role="HT_LICHSUTRUYCAP" Type="Self.HT_LICHSUTRUYCAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_LICHSUTRUYCAP">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_MENU_HT_MENU_FK">
+    <End Role="HT_MENU" Type="Self.HT_MENU" Multiplicity="0..1" />
+    <End Role="HT_MENU1" Type="Self.HT_MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_MENU">
+        <PropertyRef Name="MENUID" />
+      </Principal>
+      <Dependent Role="HT_MENU1">
+        <PropertyRef Name="KHOACHAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NCN_HT_UD_FK">
+    <End Role="HT_UNGDUNG" Type="Self.HT_UNGDUNG" Multiplicity="1" />
+    <End Role="HT_NHOMCHUCNANG" Type="Self.HT_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_UNGDUNG">
+        <PropertyRef Name="UNGDUNGID" />
+      </Principal>
+      <Dependent Role="HT_NHOMCHUCNANG">
+        <PropertyRef Name="UNGDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NCN_M_HT_M_FK">
+    <End Role="HT_MENU" Type="Self.HT_MENU" Multiplicity="1" />
+    <End Role="HT_NHOMCHUCNANG_MENU" Type="Self.HT_NHOMCHUCNANG_MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_MENU">
+        <PropertyRef Name="MENUID" />
+      </Principal>
+      <Dependent Role="HT_NHOMCHUCNANG_MENU">
+        <PropertyRef Name="MENUID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NCN_M_HT_NCN_FK">
+    <End Role="HT_NHOMCHUCNANG" Type="Self.HT_NHOMCHUCNANG" Multiplicity="1" />
+    <End Role="HT_NHOMCHUCNANG_MENU" Type="Self.HT_NHOMCHUCNANG_MENU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_NHOMCHUCNANG_MENU">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_ND_HT_CHND_FK">
+    <End Role="HT_NGUOIDUNG" Type="Self.HT_NGUOIDUNG" Multiplicity="1" />
+    <End Role="HT_CAUHINHNGUOIDUNG" Type="Self.HT_CAUHINHNGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_CAUHINHNGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NGUOIDUNG_QUYEN_HT_NGU_FK1">
+    <End Role="HT_NGUOIDUNG" Type="Self.HT_NGUOIDUNG" Multiplicity="1" />
+    <End Role="HT_NGUOIDUNG_QUYEN" Type="Self.HT_NGUOIDUNG_QUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_NGUOIDUNG_QUYEN">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_NGUOIDUNG_QUYEN_HT_QUY_FK1">
+    <End Role="HT_QUYEN" Type="Self.HT_QUYEN" Multiplicity="1" />
+    <End Role="HT_NGUOIDUNG_QUYEN" Type="Self.HT_NGUOIDUNG_QUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_QUYEN">
+        <PropertyRef Name="QUYENID" />
+      </Principal>
+      <Dependent Role="HT_NGUOIDUNG_QUYEN">
+        <PropertyRef Name="QUYENID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_QUYEN_HT_CHUCNANG_FK1">
+    <End Role="HT_CHUCNANG" Type="Self.HT_CHUCNANG" Multiplicity="1" />
+    <End Role="HT_QUYEN" Type="Self.HT_QUYEN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_CHUCNANG">
+        <PropertyRef Name="CHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_QUYEN">
+        <PropertyRef Name="CHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TC_NCN_HT_NCN_FK">
+    <End Role="HT_NHOMCHUCNANG" Type="Self.HT_NHOMCHUCNANG" Multiplicity="1" />
+    <End Role="HT_TOCHUC_NHOMCHUCNANG" Type="Self.HT_TOCHUC_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC_NHOMCHUCNANG">
+        <PropertyRef Name="NHOMCHUCNANGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TC_NCN_HT_TC_FK">
+    <End Role="HT_TOCHUC" Type="Self.HT_TOCHUC" Multiplicity="1" />
+    <End Role="HT_TOCHUC_NHOMCHUCNANG" Type="Self.HT_TOCHUC_NHOMCHUCNANG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC_NHOMCHUCNANG">
+        <PropertyRef Name="TOCHUCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TC_ND_HT_ND_FK">
+    <End Role="HT_NGUOIDUNG" Type="Self.HT_NGUOIDUNG" Multiplicity="1" />
+    <End Role="HT_TOCHUC_NGUOIDUNG" Type="Self.HT_TOCHUC_NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TC_ND_HT_TC_FK">
+    <End Role="HT_TOCHUC" Type="Self.HT_TOCHUC" Multiplicity="1" />
+    <End Role="HT_TOCHUC_NGUOIDUNG" Type="Self.HT_TOCHUC_NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC_NGUOIDUNG">
+        <PropertyRef Name="TOCHUCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_TOCHUC_HT_TOCHUC_FK">
+    <End Role="HT_TOCHUC" Type="Self.HT_TOCHUC" Multiplicity="0..1" />
+    <End Role="HT_TOCHUC1" Type="Self.HT_TOCHUC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Principal>
+      <Dependent Role="HT_TOCHUC1">
+        <PropertyRef Name="KHOACHAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_X_ND_HT_ND_FK">
+    <End Role="HT_NGUOIDUNG" Type="Self.HT_NGUOIDUNG" Multiplicity="1" />
+    <End Role="HT_XA_NGUOIDUNG" Type="Self.HT_XA_NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Principal>
+      <Dependent Role="HT_XA_NGUOIDUNG">
+        <PropertyRef Name="NGUOIDUNGID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_XA_NGUOIDUNG_HC_XA_FK">
+    <End Role="HC_DMKVHC" Type="Self.HC_DMKVHC" Multiplicity="1" />
+    <End Role="HT_XA_NGUOIDUNG" Type="Self.HT_XA_NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HT_XA_NGUOIDUNG">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_XA_TOCHUC_HC_XA_FK">
+    <End Role="HC_DMKVHC" Type="Self.HC_DMKVHC" Multiplicity="1" />
+    <End Role="HT_XA_TOCHUC" Type="Self.HT_XA_TOCHUC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HC_DMKVHC">
+        <PropertyRef Name="KVHCID" />
+      </Principal>
+      <Dependent Role="HT_XA_TOCHUC">
+        <PropertyRef Name="XAID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="HT_XA_TOCHUC_HT_TOCHUC_FK">
+    <End Role="HT_TOCHUC" Type="Self.HT_TOCHUC" Multiplicity="1" />
+    <End Role="HT_XA_TOCHUC" Type="Self.HT_XA_TOCHUC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="HT_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Principal>
+      <Dependent Role="HT_XA_TOCHUC">
+        <PropertyRef Name="TOCHUCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MPLISModelStoreContainer">
+    <EntitySet Name="HC_DMKVHC" EntityType="Self.HC_DMKVHC" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HC_HUYEN" EntityType="Self.HC_HUYEN" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HC_TINH" EntityType="Self.HC_TINH" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HC_TINHTHAMSO" EntityType="Self.HC_TINHTHAMSO" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HS_HOSO" EntityType="Self.HS_HOSO" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HS_LICHSU" EntityType="Self.HS_LICHSU" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HS_LIENKETTHUADAT" EntityType="Self.HS_LIENKETTHUADAT" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HS_THANHPHANHOSO" EntityType="Self.HS_THANHPHANHOSO" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_CAUHINH" EntityType="Self.HT_CAUHINH" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_CAUHINHNGUOIDUNG" EntityType="Self.HT_CAUHINHNGUOIDUNG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_CHUCNANG" EntityType="Self.HT_CHUCNANG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_CHUCNANG_NHOMCHUCNANG" EntityType="Self.HT_CHUCNANG_NHOMCHUCNANG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_LICHSUTRUYCAP" EntityType="Self.HT_LICHSUTRUYCAP" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_MAUGIAYTOKEMTHEOHS" EntityType="Self.HT_MAUGIAYTOKEMTHEOHS" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_MENU" EntityType="Self.HT_MENU" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_NGUOIDUNG" EntityType="Self.HT_NGUOIDUNG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_NGUOIDUNG_QUYEN" EntityType="Self.HT_NGUOIDUNG_QUYEN" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_NHOMCHUCNANG" EntityType="Self.HT_NHOMCHUCNANG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_NHOMCHUCNANG_MENU" EntityType="Self.HT_NHOMCHUCNANG_MENU" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_QUYEN" EntityType="Self.HT_QUYEN" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_THONGBAO" EntityType="Self.HT_THONGBAO" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_TOCHUC" EntityType="Self.HT_TOCHUC" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_TOCHUC_NGUOIDUNG" EntityType="Self.HT_TOCHUC_NGUOIDUNG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_TOCHUC_NHOMCHUCNANG" EntityType="Self.HT_TOCHUC_NHOMCHUCNANG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_UNGDUNG" EntityType="Self.HT_UNGDUNG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_XA_NGUOIDUNG" EntityType="Self.HT_XA_NGUOIDUNG" Schema="MPLIS" store:Type="Tables" />
+    <EntitySet Name="HT_XA_TOCHUC" EntityType="Self.HT_XA_TOCHUC" Schema="MPLIS" store:Type="Tables" />
+    <AssociationSet Name="HC_HUYEN_HC_TINH_FK1" Association="Self.HC_HUYEN_HC_TINH_FK1">
+      <End Role="HC_TINH" EntitySet="HC_TINH" />
+      <End Role="HC_HUYEN" EntitySet="HC_HUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="HC_TINH_HC_TINHTHAMSO" Association="Self.HC_TINH_HC_TINHTHAMSO">
+      <End Role="HC_TINH" EntitySet="HC_TINH" />
+      <End Role="HC_TINHTHAMSO" EntitySet="HC_TINHTHAMSO" />
+    </AssociationSet>
+    <AssociationSet Name="HC_XA_HC_HUYEN_FK" Association="Self.HC_XA_HC_HUYEN_FK">
+      <End Role="HC_HUYEN" EntitySet="HC_HUYEN" />
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+    </AssociationSet>
+    <AssociationSet Name="HS_HOSO_HC_XA_FK" Association="Self.HS_HOSO_HC_XA_FK">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HS_HOSO" EntitySet="HS_HOSO" />
+    </AssociationSet>
+    <AssociationSet Name="HS_LIENKETTHUADAT_FK1" Association="Self.HS_LIENKETTHUADAT_FK1">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HS_LIENKETTHUADAT" EntitySet="HS_LIENKETTHUADAT" />
+    </AssociationSet>
+    <AssociationSet Name="HS_LS_HC_XA_FK" Association="Self.HS_LS_HC_XA_FK">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HS_LICHSU" EntitySet="HS_LICHSU" />
+    </AssociationSet>
+    <AssociationSet Name="HS_LST_HS_HS_FK" Association="Self.HS_LST_HS_HS_FK">
+      <End Role="HS_HOSO" EntitySet="HS_HOSO" />
+      <End Role="HS_LICHSU" EntitySet="HS_LICHSU" />
+    </AssociationSet>
+    <AssociationSet Name="HS_THANHPHANHOSO_HS_HOSO_FK1" Association="Self.HS_THANHPHANHOSO_HS_HOSO_FK1">
+      <End Role="HS_HOSO" EntitySet="HS_HOSO" />
+      <End Role="HS_THANHPHANHOSO" EntitySet="HS_THANHPHANHOSO" />
+    </AssociationSet>
+    <AssociationSet Name="HS_TOTHUA_FK1" Association="Self.HS_TOTHUA_FK1">
+      <End Role="HS_HOSO" EntitySet="HS_HOSO" />
+      <End Role="HS_LIENKETTHUADAT" EntitySet="HS_LIENKETTHUADAT" />
+    </AssociationSet>
+    <AssociationSet Name="HT_CHUCNANG_HT_CHUCNANG_FK" Association="Self.HT_CHUCNANG_HT_CHUCNANG_FK">
+      <End Role="HT_CHUCNANG" EntitySet="HT_CHUCNANG" />
+      <End Role="HT_CHUCNANG1" EntitySet="HT_CHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_CN_NCN_HT_CN_FK" Association="Self.HT_CN_NCN_HT_CN_FK">
+      <End Role="HT_CHUCNANG" EntitySet="HT_CHUCNANG" />
+      <End Role="HT_CHUCNANG_NHOMCHUCNANG" EntitySet="HT_CHUCNANG_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_CN_NCN_HT_NCN_FK" Association="Self.HT_CN_NCN_HT_NCN_FK">
+      <End Role="HT_NHOMCHUCNANG" EntitySet="HT_NHOMCHUCNANG" />
+      <End Role="HT_CHUCNANG_NHOMCHUCNANG" EntitySet="HT_CHUCNANG_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_LSTC_HT_ND_FK" Association="Self.HT_LSTC_HT_ND_FK">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_LICHSUTRUYCAP" EntitySet="HT_LICHSUTRUYCAP" />
+    </AssociationSet>
+    <AssociationSet Name="HT_MENU_HT_MENU_FK" Association="Self.HT_MENU_HT_MENU_FK">
+      <End Role="HT_MENU" EntitySet="HT_MENU" />
+      <End Role="HT_MENU1" EntitySet="HT_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NCN_HT_UD_FK" Association="Self.HT_NCN_HT_UD_FK">
+      <End Role="HT_UNGDUNG" EntitySet="HT_UNGDUNG" />
+      <End Role="HT_NHOMCHUCNANG" EntitySet="HT_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NCN_M_HT_M_FK" Association="Self.HT_NCN_M_HT_M_FK">
+      <End Role="HT_MENU" EntitySet="HT_MENU" />
+      <End Role="HT_NHOMCHUCNANG_MENU" EntitySet="HT_NHOMCHUCNANG_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NCN_M_HT_NCN_FK" Association="Self.HT_NCN_M_HT_NCN_FK">
+      <End Role="HT_NHOMCHUCNANG" EntitySet="HT_NHOMCHUCNANG" />
+      <End Role="HT_NHOMCHUCNANG_MENU" EntitySet="HT_NHOMCHUCNANG_MENU" />
+    </AssociationSet>
+    <AssociationSet Name="HT_ND_HT_CHND_FK" Association="Self.HT_ND_HT_CHND_FK">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_CAUHINHNGUOIDUNG" EntitySet="HT_CAUHINHNGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NGUOIDUNG_QUYEN_HT_NGU_FK1" Association="Self.HT_NGUOIDUNG_QUYEN_HT_NGU_FK1">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_NGUOIDUNG_QUYEN" EntitySet="HT_NGUOIDUNG_QUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="HT_NGUOIDUNG_QUYEN_HT_QUY_FK1" Association="Self.HT_NGUOIDUNG_QUYEN_HT_QUY_FK1">
+      <End Role="HT_QUYEN" EntitySet="HT_QUYEN" />
+      <End Role="HT_NGUOIDUNG_QUYEN" EntitySet="HT_NGUOIDUNG_QUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="HT_QUYEN_HT_CHUCNANG_FK1" Association="Self.HT_QUYEN_HT_CHUCNANG_FK1">
+      <End Role="HT_CHUCNANG" EntitySet="HT_CHUCNANG" />
+      <End Role="HT_QUYEN" EntitySet="HT_QUYEN" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TC_NCN_HT_NCN_FK" Association="Self.HT_TC_NCN_HT_NCN_FK">
+      <End Role="HT_NHOMCHUCNANG" EntitySet="HT_NHOMCHUCNANG" />
+      <End Role="HT_TOCHUC_NHOMCHUCNANG" EntitySet="HT_TOCHUC_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TC_NCN_HT_TC_FK" Association="Self.HT_TC_NCN_HT_TC_FK">
+      <End Role="HT_TOCHUC" EntitySet="HT_TOCHUC" />
+      <End Role="HT_TOCHUC_NHOMCHUCNANG" EntitySet="HT_TOCHUC_NHOMCHUCNANG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TC_ND_HT_ND_FK" Association="Self.HT_TC_ND_HT_ND_FK">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_TOCHUC_NGUOIDUNG" EntitySet="HT_TOCHUC_NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TC_ND_HT_TC_FK" Association="Self.HT_TC_ND_HT_TC_FK">
+      <End Role="HT_TOCHUC" EntitySet="HT_TOCHUC" />
+      <End Role="HT_TOCHUC_NGUOIDUNG" EntitySet="HT_TOCHUC_NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_TOCHUC_HT_TOCHUC_FK" Association="Self.HT_TOCHUC_HT_TOCHUC_FK">
+      <End Role="HT_TOCHUC" EntitySet="HT_TOCHUC" />
+      <End Role="HT_TOCHUC1" EntitySet="HT_TOCHUC" />
+    </AssociationSet>
+    <AssociationSet Name="HT_X_ND_HT_ND_FK" Association="Self.HT_X_ND_HT_ND_FK">
+      <End Role="HT_NGUOIDUNG" EntitySet="HT_NGUOIDUNG" />
+      <End Role="HT_XA_NGUOIDUNG" EntitySet="HT_XA_NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_XA_NGUOIDUNG_HC_XA_FK" Association="Self.HT_XA_NGUOIDUNG_HC_XA_FK">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HT_XA_NGUOIDUNG" EntitySet="HT_XA_NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="HT_XA_TOCHUC_HC_XA_FK" Association="Self.HT_XA_TOCHUC_HC_XA_FK">
+      <End Role="HC_DMKVHC" EntitySet="HC_DMKVHC" />
+      <End Role="HT_XA_TOCHUC" EntitySet="HT_XA_TOCHUC" />
+    </AssociationSet>
+    <AssociationSet Name="HT_XA_TOCHUC_HT_TOCHUC_FK" Association="Self.HT_XA_TOCHUC_HT_TOCHUC_FK">
+      <End Role="HT_TOCHUC" EntitySet="HT_TOCHUC" />
+      <End Role="HT_XA_TOCHUC" EntitySet="HT_XA_TOCHUC" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,17 @@
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\MPLIS.Library.Services.SSO.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\MPLIS.Library.Services.SSO.pdb
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\AutoMapper.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\EntityFramework.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\MPLIS.Libraries.Data.SSO.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\MPLIS.Libraries.Data.SSOCore.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\Newtonsoft.Json.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\System.Net.Http.Formatting.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\MPLIS.Libraries.Data.SSO.pdb
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\MPLIS.Libraries.Data.SSOCore.pdb
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\AutoMapper.xml
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\EntityFramework.xml
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\Newtonsoft.Json.xml
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\bin\Debug\System.Net.Http.Formatting.xml
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\obj\Debug\MPLIS.Library.Services.SSO.csprojResolveAssemblyReference.cache
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\obj\Debug\MPLIS.Library.Services.SSO.dll
+D:\MPLIS\MPLIS_SSO\MPLIS.Library.Services.SSO\obj\Debug\MPLIS.Library.Services.SSO.pdb
